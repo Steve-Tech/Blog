@@ -1,0 +1,32 @@
+---
+id: 1130
+title: How to get an Xbox One Controller to work with Google Earth Flight Simulator
+date: 2019-02-10T13:30:44+10:00
+author: SteveTech
+layout: post
+guid: https://jas-team.net/?p=1130
+permalink: /2019/02/10/xbox-one-controller-with-google-earth/
+onesignal_meta_box_present:
+  - ""
+  - ""
+onesignal_send_notification:
+  - ""
+  - ""
+amp-cf7-form-checker:
+  - "1"
+categories:
+  - Uncategorized
+---
+Are you so bored that you decide that you want to play the Google Earth flight simulator but find out that the keyboard controls are horrible so you grab your Xbox One controller and it doesn&#8217;t work, well I have some good news for you.
+
+It turns out that Google Earth already supports Xbox 360 controllers and the newer versions of Windows 10 have some backward compatibility built in for &#8216;games&#8217; that are only compatible with Xbox 360 controllers and not the One, but if you aren&#8217;t running Windows 10 here&#8217;s a little workaround.
+
+  
+[wpdm_package id=&#8217;1131&#8242;]  
+  
+
+
+  1. Go to the installation directory of Google Earth (&#8216;C:\Program Files\Google\Google Earth&#8217; or &#8216;Google Earth Pro&#8217;)
+  2. Then go into these folders: &#8216;client\res\flightsim\controller&#8217;, You should now be in &#8216;C:\Program Files\Google\Google Earth\client\res\flightsim\controller&#8217;
+  3. Download the file above and paste it in that directory 
+  4. Done!
