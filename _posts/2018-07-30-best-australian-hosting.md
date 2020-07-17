@@ -83,6 +83,6 @@ You should always have the nearest hosting for your target area so your customer
   * <a href="https://www.webinabox.net.au/" target="_blank" rel="noopener noreferrer">Web in a Box</a> &#8211; Perth
   * <a href="https://www.mediacloud.net.au/" target="_blank" rel="noopener noreferrer">MediaCloud</a> &#8211; Perth
 
-Know an Aussie hosting company that we haven&#8217;t listed, comment it below.
+Know an Aussie hosting company that we haven’t listed, comment it below.
 
 &nbsp;

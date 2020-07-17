@@ -50,7 +50,7 @@ tags:
   - VM
   - VMware
 ---
-I have an old slide scanner that only works with Windows 98 and I was wondering if I could use it again to scan some slides and I tried using [Oracle VM VirtualBox](https://www.virtualbox.org/) with Windows 98 to connect to it but it wouldn&#8217;t detect the scanner but then I found [VMware Workstation Player](https://www.vmware.com/products/workstation-player.html) and it worked great<!--more--> probably because it looked for the device then unmounted the device from the &#8216;Host&#8217; and connected it to the &#8216;Guest&#8217; and I&#8217;m going to show you how to do it yourself.
+I have an old slide scanner that only works with Windows 98 and I was wondering if I could use it again to scan some slides and I tried using [Oracle VM VirtualBox](https://www.virtualbox.org/) with Windows 98 to connect to it but it wouldn’t detect the scanner but then I found [VMware Workstation Player](https://www.vmware.com/products/workstation-player.html) and it worked great<!--more--> probably because it looked for the device then unmounted the device from the ‘Host’ and connected it to the ‘Guest’ and I’m going to show you how to do it yourself.
 
 [the_ad id=&#8221;991&#8243;]
 
@@ -58,7 +58,7 @@ I have an old slide scanner that only works with Windows 98 and I was wondering 
 
 ### Stuff to get beforehand
 
-  * Just Download [VMware Workstation Player](https://www.vmware.com/products/workstation-player/workstation-player-evaluation.html) and that&#8217;s it
+  * Just Download [VMware Workstation Player](https://www.vmware.com/products/workstation-player/workstation-player-evaluation.html) and that’s it
 
 ### Steps
 

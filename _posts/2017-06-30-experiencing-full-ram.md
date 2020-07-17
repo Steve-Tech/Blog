@@ -38,8 +38,8 @@ categories:
 ---
 Our RAMcleaner is a light weight program that is open source and portable so you can stick it on a USB and run it on any computer running Windows.<!--more-->
 
-If you are experiencing times when your computer&#8217;s RAM is full download our RAMcleaner to fix this!
+If you are experiencing times when your computer’s RAM is full download our RAMcleaner to fix this!
 
-[wpdm\_button\_template id=&#8217;513&#8242; style=&#8221;light&#8221; align=&#8221;left&#8221;]
+[wpdm\_button\_template id=’513&#8242; style=&#8221;light&#8221; align=&#8221;left&#8221;]
 
 or find it [here](https://jas-team.net/software)

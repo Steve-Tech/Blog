@@ -65,7 +65,7 @@ Use either Bluetooth or your Micro USB cable to connect to your device.
 
 For the wired connection (micro USB connection):
 
-All you have to do is connect to your PC or laptop. Windows should recognise it and you&#8217;re good to go!
+All you have to do is connect to your PC or laptop. Windows should recognise it and you’re good to go!
 
 &nbsp;
 

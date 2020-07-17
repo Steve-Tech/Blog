@@ -39,9 +39,9 @@ categories:
 
 <!--more-->
 
-### What we&#8217;ve done:
+### What we’ve done:
 
-You may have noticed that the background has moving &#8216;particles&#8217; this is because of a [Cloudflare](https://www.cloudflare.com/) plugin I added, Click on the background and watch more spawn in.
+You may have noticed that the background has moving ‘particles’ this is because of a [Cloudflare](https://www.cloudflare.com/) plugin I added, Click on the background and watch more spawn in.
 
 In the footer, this badge is shown:  
 <a href="https://www.gravityscan.com/verify/ac1c5c85f6fc35f241a5ddce8c1fc230d0cb8df7ea0f3f0b8745a3f24c685728" rel="noopener noreferrer"><img src="https://badges.gravityscan.com/badges/jas-team.net-ac1c5c85f6fc35f241a5ddce8c1fc230d0cb8df7ea0f3f0b8745a3f24c685728" alt="Website Malware Scan" width="117" height="67" /></a>  
@@ -57,6 +57,6 @@ We have also done some SSL tweaks to make our site as secure as ever.
 
 &nbsp;
 
-### What we&#8217;re planning:
+### What we’re planning:
 
-We are also planning to do proper helpful blog posts on random tech topics but this won&#8217;t take effect until next year (2018).
+We are also planning to do proper helpful blog posts on random tech topics but this won’t take effect until next year (2018).

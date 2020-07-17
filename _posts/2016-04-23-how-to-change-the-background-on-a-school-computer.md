@@ -18,7 +18,7 @@ categories:
   - Tutorials
 ---
 <li class="ordlist">
-  Download Background Changer [wpdm_package id=&#8217;1044&#8242;]
+  Download Background Changer [wpdm_package id=’1044&#8242;]
 </li>
 <li class="ordlist">
   Find the Picture you want then Shift + Right Click it then Select &#8220;Copy as path&#8221;
@@ -32,13 +32,13 @@ categories:
 
 #### More Versions:
 
-[wpdm_package id=&#8217;1044&#8242;]
+[wpdm_package id=’1044&#8242;]
 
-[wpdm_package id=&#8217;1037&#8242;]
+[wpdm_package id=’1037&#8242;]
 
-[wpdm_package id=&#8217;1042&#8242;]
+[wpdm_package id=’1042&#8242;]
 
-More of my programs available on [Steve&#8217;s software page](https://jas-team.net/software/steves-downloads/).
+More of my programs available on [Steve’s software page](https://jas-team.net/software/steves-downloads/).
 
 #### A more Advanced Method (What my program does already):
 
