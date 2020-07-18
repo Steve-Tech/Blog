@@ -4,7 +4,7 @@ title: How to Change the Desktop Background on a School/Work Computer
 date: 2016-04-23T13:52:51+10:00
 author: SteveTech
 layout: post
-guid: https://jas-team.net/?p=1061
+guid: /?p=1061
 permalink: /2016/04/23/how-to-change-the-background-on-a-school-computer/
 onesignal_meta_box_present:
   - "1"
@@ -38,7 +38,7 @@ categories:
 
 [wpdm_package id=’1042&#8242;]
 
-More of my programs available on [Steve’s software page](https://jas-team.net/software/steves-downloads/).
+More of my programs available on [Steve’s software page](/software/steves-downloads/).
 
 #### A more Advanced Method (What my program does already):
 

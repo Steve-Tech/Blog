@@ -4,7 +4,7 @@ title: Have You Been Experiencing Full RAM?
 date: 2017-06-30T08:43:27+10:00
 author: CaptainJishi
 layout: post
-guid: https://jas-team.net/?p=584
+guid: /?p=584
 permalink: /2017/06/30/experiencing-full-ram/
 onesignal_meta_box_present:
   - "1"
@@ -42,4 +42,4 @@ If you are experiencing times when your computer’s RAM is full download our RA
 
 [wpdm\_button\_template id=’513&#8242; style=&#8221;light&#8221; align=&#8221;left&#8221;]
 
-or find it [here](https://jas-team.net/software)
+or find it [here](/software)

@@ -4,7 +4,7 @@ title: Now using Disqus for our comments
 date: 2017-09-10T12:30:05+10:00
 author: SteveTech
 layout: post
-guid: https://jas-team.net/?p=596
+guid: /?p=596
 permalink: /2017/09/10/now-using-disqus-comments/
 onesignal_meta_box_present:
   - "1"

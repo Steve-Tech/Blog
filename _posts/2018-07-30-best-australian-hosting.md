@@ -4,7 +4,7 @@ title: Best Australian Hosting for your location
 date: 2018-07-30T10:07:33+10:00
 author: SteveTech
 layout: post
-guid: https://jas-team.net/?p=1009
+guid: /?p=1009
 permalink: /2018/07/30/best-australian-hosting/
 onesignal_meta_box_present:
   - "1"

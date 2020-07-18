@@ -4,7 +4,7 @@ title: Updates to JAS Tech
 date: 2017-10-01T20:28:14+10:00
 author: SteveTech
 layout: post
-guid: https://jas-team.net/?p=618
+guid: /?p=618
 permalink: /2017/10/01/updates-jas-tech/
 onesignal_meta_box_present:
   - "1"

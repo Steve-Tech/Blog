@@ -4,7 +4,7 @@ title: How to get an Xbox One Controller to work with Google Earth Flight Simula
 date: 2019-02-10T13:30:44+10:00
 author: SteveTech
 layout: post
-guid: https://jas-team.net/?p=1130
+guid: /?p=1130
 permalink: /2019/02/10/xbox-one-controller-with-google-earth/
 onesignal_meta_box_present:
   - ""

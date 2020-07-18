@@ -4,7 +4,7 @@ title: JAS Tech now supports HTTPS
 date: 2017-05-13T17:14:19+10:00
 author: SteveTech
 layout: post
-guid: https://jas-team.net/?p=415
+guid: /?p=415
 permalink: /2017/05/13/now-supports-https/
 dsq_thread_id:
   - "6132151167"

@@ -4,7 +4,7 @@ title: 'Intel XTU ‘Attempted to install on an unsupported platform’'
 date: 2019-07-30T19:50:47+10:00
 author: SteveTech
 layout: post
-guid: https://jas-team.net/?p=1200
+guid: /?p=1200
 permalink: /2019/07/30/intel-xtu-attempted-to-install-on-an-unsupported-platform/
 onesignal_meta_box_present:
   - "1"

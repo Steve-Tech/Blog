@@ -4,7 +4,7 @@ title: How to program a Wemos D1/ESP 12 over TTL Serial
 date: 2019-01-01T16:17:49+10:00
 author: SteveTech
 layout: post
-guid: https://jas-team.net/?p=1086
+guid: /?p=1086
 permalink: /2019/01/01/program-esp-12-over-serial/
 onesignal_meta_box_present:
   - "1"

@@ -4,7 +4,7 @@ title: Software Page
 date: 2017-06-20T08:29:07+10:00
 author: CaptainJishi
 layout: post
-guid: https://jas-team.net/?p=576
+guid: /?p=576
 permalink: /2017/06/20/software-page-2/
 onesignal_meta_box_present:
   - "1"

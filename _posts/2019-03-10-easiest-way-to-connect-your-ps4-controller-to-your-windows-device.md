@@ -4,7 +4,7 @@ title: Easiest way to connect your PS4 controller to your Windows Device
 date: 2019-03-10T19:24:30+10:00
 author: CaptainJishi
 layout: post
-guid: https://jas-team.net/?p=1160
+guid: /?p=1160
 permalink: /2019/03/10/easiest-way-to-connect-your-ps4-controller-to-your-windows-device/
 onesignal_meta_box_present:
   - "1"

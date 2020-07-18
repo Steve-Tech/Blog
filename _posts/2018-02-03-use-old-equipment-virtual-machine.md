@@ -4,7 +4,7 @@ title: How to use old Equipment with a Virtual Machine
 date: 2018-02-03T09:01:45+10:00
 author: SteveTech
 layout: post
-guid: https://jas-team.net/?p=783
+guid: /?p=783
 permalink: /2018/02/03/use-old-equipment-virtual-machine/
 onesignal_meta_box_present:
   - "1"
@@ -64,5 +64,5 @@ I have an old slide scanner that only works with Windows 98 and I was wondering 
 
   1. Plug in the device you want to use into your computer and open VMware Workstation Player
   2. Find an image of Windows 98 ([here](https://winworldpc.com/product/windows-98/98-second-edition)) or the version that works with your device and Install it in VMware Workstation
-  3. Connect the device to your Virtual Machine<img class="aligncenter wp-image-921 size-full" src="https://jas-team.net/wp-content/uploads/2018/01/Windows-98-VM-Connect.png" alt="" width="900" height="420" />
+  3. Connect the device to your Virtual Machine<img class="aligncenter wp-image-921 size-full" src="/uploads/2018/01/Windows-98-VM-Connect.png" alt="" width="900" height="420" />
   4. Install any needed Drivers and your done

@@ -4,7 +4,7 @@ title: 'How to compile and use Facebook Research’s Craftassist'
 date: 2019-09-15T10:48:04+10:00
 author: SteveTech
 layout: post
-guid: https://jas-team.net/?p=1206
+guid: /?p=1206
 permalink: /2019/09/15/compile-and-use-facebook-researchs-craftassist/
 onesignal_meta_box_present:
   - "1"

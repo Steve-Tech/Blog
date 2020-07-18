@@ -4,7 +4,7 @@ title: New Software Page
 date: 2017-06-12T10:26:54+10:00
 author: SteveTech
 layout: post
-guid: https://jas-team.net/?p=555
+guid: /?p=555
 permalink: /2017/06/12/software-page/
 onesignal_meta_box_present:
   - "1"
