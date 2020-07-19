@@ -18,7 +18,8 @@ categories:
   - Tutorials
 ---
 <li class="ordlist">
-  Download Background Changer [wpdm_package id=’1044&#8242;]
+  Download Background Changer 
+[Graphical Background Changer.vbs](\assets\downloads\Graphical%20Background%20Changer.vbs)
 </li>
 <li class="ordlist">
   Find the Picture you want then Shift + Right Click it then Select &#8220;Copy as path&#8221;
@@ -32,11 +33,11 @@ categories:
 
 #### More Versions:
 
-[wpdm_package id=’1044&#8242;]
+[Download Graphical Background Changer.vbs](\assets\downloads\Graphical%20Background%20Changer.vbs)
 
-[wpdm_package id=’1037&#8242;]
+[Download Background Changer-V2.bat](\assets\downloads\Background%20Changer-V2.bat)
 
-[wpdm_package id=’1042&#8242;]
+[Download Background Changer.bat](\assets\downloads\Background%20Changer.bat)
 
 More of my programs available on [Steve’s software page](/software/steves-downloads/).
 
