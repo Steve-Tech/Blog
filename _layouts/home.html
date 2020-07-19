@@ -25,6 +25,12 @@ layout: default
           {{ post.excerpt }}
         {%- endif -%}
       </li>
+		{% assign divisible = forloop.index | modulo: 2 %}
+		{% if divisible == 0 %}
+		  <li>
+		    {%- include adsense-infeed.html -%}
+		  </li>
+		{%- endif -%}
       {%- endfor -%}
     </ul>
 
