@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Install another OS on to a QNAP NAS"
+author: Steve-Tech
 ---
 I saw someone else on [r/QNAP install Windows Server on their TS-253Be](https://www.reddit.com/r/qnap/comments/fndgcr/windows_server_2012_and_2016_works_on_ts253be/) a while ago, and I really wanted to do the same with my TS-453Be, so I'm writing this guide to show others what I've done.
 

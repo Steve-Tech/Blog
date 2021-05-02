@@ -2,45 +2,10 @@
 id: 783
 title: How to use old Equipment with a Virtual Machine
 date: 2018-02-03T09:01:45+10:00
-author: SteveTech
+author: Steve-Tech
 layout: post
 guid: /?p=783
 permalink: /2018/02/03/use-old-equipment-virtual-machine/
-onesignal_meta_box_present:
-  - "1"
-  - "1"
-onesignal_send_notification:
-  - ""
-  - ""
-dsq_thread_id:
-  - "6455131056"
-  - "6455131056"
-bs_social_share_twitter:
-  - "0"
-  - "0"
-bs_social_share_facebook:
-  - "1"
-  - "1"
-bs_social_share_reddit:
-  - "0"
-  - "0"
-bs_social_share_google_plus:
-  - "0"
-  - "0"
-bs_social_share_interval:
-  - "1525876569"
-  - "1525876569"
-ampforwp_custom_content_editor:
-  - ""
-  - ""
-ampforwp_custom_content_editor_checkbox:
-  - ""
-  - ""
-ampforwp-amp-on-off:
-  - default
-  - default
-amp-cf7-form-checker:
-  - "1"
 categories:
   - Tutorials
 tags:

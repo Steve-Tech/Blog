@@ -11,7 +11,12 @@ layout: default
         {{ page.date | date: date_format }}
       </time>
       {%- if page.author -%}
+	  {%- if site.data.authors contains page.author -%}
+	  {% assign author = site.data.authors[page.author] %}
+        • <a href="{% if author.github != nul %}{{ author.github }}{% else %}{{ author.url }}{% endif %}"><span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></span></a>
+	  {%- else -%}
         • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></span>
+	  {%- endif -%}
       {%- endif -%}</p>
   </header>
 

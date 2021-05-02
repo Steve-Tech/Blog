@@ -2,43 +2,10 @@
 id: 1200
 title: 'Intel XTU ‘Attempted to install on an unsupported platform’'
 date: 2019-07-30T19:50:47+10:00
-author: SteveTech
+author: Steve-Tech
 layout: post
 guid: /?p=1200
 permalink: /2019/07/30/intel-xtu-attempted-to-install-on-an-unsupported-platform/
-onesignal_meta_box_present:
-  - "1"
-  - "1"
-onesignal_send_notification:
-  - ""
-  - ""
-ampforwp_custom_content_editor:
-  - ""
-  - ""
-ampforwp_custom_content_editor_checkbox:
-  - ""
-  - ""
-ampforwp-amp-on-off:
-  - default
-  - default
-uuid:
-  - c81366c2-6742-bd7b-6b35-0ff3e5a2727f
-  - c81366c2-6742-bd7b-6b35-0ff3e5a2727f
-response_body:
-  - '{"id":"7f8feed5-f498-4a55-a6f2-68bb177109bb","recipients":109,"external_id":"c81366c2-6742-bd7b-6b35-0ff3e5a2727f","warnings":["You must configure iOS notifications in your OneSignal settings if you wish to send messages to iOS users."]}'
-  - '{"id":"7f8feed5-f498-4a55-a6f2-68bb177109bb","recipients":109,"external_id":"c81366c2-6742-bd7b-6b35-0ff3e5a2727f","warnings":["You must configure iOS notifications in your OneSignal settings if you wish to send messages to iOS users."]}'
-status:
-  - "200"
-  - "200"
-recipients:
-  - "109"
-  - "109"
-notification_id:
-  - 7f8feed5-f498-4a55-a6f2-68bb177109bb
-  - 7f8feed5-f498-4a55-a6f2-68bb177109bb
-amp-cf7-form-checker:
-  - "1"
-  - "1"
 categories:
   - Tutorials
 ---

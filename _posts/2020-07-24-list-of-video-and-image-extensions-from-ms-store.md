@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "A list of Video and Image Extensions downloadable from the Microsoft Store"
+author: Steve-Tech
 ---
 I wanted to have every Video and Image Extension just in case I ever needed to use one but I couldn't find a list online so I made one.
 

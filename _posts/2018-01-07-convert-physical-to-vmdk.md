@@ -2,48 +2,10 @@
 id: 717
 title: How to convert a Physical Disk to a VMware VMDK image
 date: 2018-01-07T09:04:48+10:00
-author: SteveTech
+author: Steve-Tech
 layout: post
 guid: /?p=717
 permalink: /2018/01/07/convert-physical-to-vmdk/
-onesignal_meta_box_present:
-  - "1"
-  - "1"
-onesignal_send_notification:
-  - ""
-  - ""
-dsq_thread_id:
-  - "6396353048"
-  - "6396353048"
-bs_social_share_facebook:
-  - "0"
-  - "0"
-bs_social_share_twitter:
-  - "0"
-  - "0"
-bs_social_share_reddit:
-  - "0"
-  - "0"
-bs_social_share_google_plus:
-  - "0"
-  - "0"
-bs_social_share_interval:
-  - "1525875672"
-  - "1525875672"
-ampforwp_custom_content_editor:
-  - ""
-  - ""
-ampforwp_custom_content_editor_checkbox:
-  - ""
-  - ""
-ampforwp-amp-on-off:
-  - default
-  - default
-amp-cf7-form-checker:
-  - "1"
-  - "1"
-amp-page-builder:
-  - ""
 categories:
   - Tutorials
 tags:
@@ -70,10 +32,10 @@ I was recently wanting to convert all of my old hard drives from old computers t
 
 **(12/05/2018):** I’ve recently found [Vmdk2Phys](https://sourceforge.net/projects/vmdk2phys/) which is still in beta (and doesn’t look the best) but is more straightforward then following the guide below. [Vmdk2Phys](https://sourceforge.net/projects/vmdk2phys/) also supports converting VMDKs to physical drives.
 
-  1. Open Disk2vhd and untick all volumes except the one you want to virtualize and pick a location to output the file to, then click the ‘Create’ button. It will take a while to finish depending on the size and speed of your drive.<img class=" size-full wp-image-761 aligncenter" src="/assets/2018/01/Disk2vhd.png" alt="Disk2vhd" width="511" height="355" />
-  2. Once Disk2vhd finishes open StarWind V2V Converter select ‘Local file’ and click ‘Next >’ when it asks for the ‘Source image location’<img class="size-full wp-image-762 aligncenter" src="/assets/2018/01/StarWind-V2V-Converter-Image-location.png" alt="StarWind V2V Converter - Image location" width="565" height="478" />
-  3. Select the ‘Source image’ then click ‘Next >’<img class="size-full wp-image-784 aligncenter" src="/assets/2018/01/StarWind-V2V-Converter-Source-image.png" alt="StarWind V2V Converter - Source image" width="565" height="478" />
-  4. Select the format you want to convert to (the 1st and 3rd option are probably the most compatible option with VMware Workstation Player)<img class="size-full wp-image-785 aligncenter" src="/assets/2018/01/StarWind-V2V-Converter-Destination-image-format.png" alt="StarWind V2V Converter - Destination image format" width="565" height="478" />
-  5. Select the ‘Virtual disk type’ (Select the one most compatible with the windows installation eg. IDE for Windows XP)<img class="size-full wp-image-802 aligncenter" src="/assets/2018/01/StarWind-V2V-Converter-VMDK-Options.png" alt="StarWind V2V Converter - VMDK Options" width="565" height="478" />
-  6. Set your destination file location then click ‘Next >’<img class="size-full wp-image-805 aligncenter" src="/assets/2018/01/StarWind-V2V-Converter-Destination-file.png" alt="StarWind V2V Converter - Destination file" width="565" height="478" />
-  7. Run the converted file in VMware Workstation Player<img class="size-full wp-image-854 aligncenter" src="/assets/2018/01/StarWind-V2V-Converter-Converting-Finished.png" alt="StarWind V2V Converter - Converting Finished" width="565" height="478" />
+  1. Open Disk2vhd and untick all volumes except the one you want to virtualize and pick a location to output the file to, then click the ‘Create’ button. It will take a while to finish depending on the size and speed of your drive.<img src="/assets/2018/01/Disk2vhd.png" alt="Disk2vhd" width="511" height="355" />
+  2. Once Disk2vhd finishes open StarWind V2V Converter select ‘Local file’ and click ‘Next >’ when it asks for the ‘Source image location’<img src="/assets/2018/01/StarWind-V2V-Converter-Image-location.png" alt="StarWind V2V Converter - Image location" width="565" height="478" />
+  3. Select the ‘Source image’ then click ‘Next >’<img src="/assets/2018/01/StarWind-V2V-Converter-Source-image.png" alt="StarWind V2V Converter - Source image" width="565" height="478" />
+  4. Select the format you want to convert to (the 1st and 3rd option are probably the most compatible option with VMware Workstation Player)<img src="/assets/2018/01/StarWind-V2V-Converter-Destination-image-format.png" alt="StarWind V2V Converter - Destination image format" width="565" height="478" />
+  5. Select the ‘Virtual disk type’ (Select the one most compatible with the windows installation eg. IDE for Windows XP)<img src="/assets/2018/01/StarWind-V2V-Converter-VMDK-Options.png" alt="StarWind V2V Converter - VMDK Options" width="565" height="478" />
+  6. Set your destination file location then click ‘Next >’<img src="/assets/2018/01/StarWind-V2V-Converter-Destination-file.png" alt="StarWind V2V Converter - Destination file" width="565" height="478" />
+  7. Run the converted file in VMware Workstation Player<img src="/assets/2018/01/StarWind-V2V-Converter-Converting-Finished.png" alt="StarWind V2V Converter - Converting Finished" width="565" height="478" />

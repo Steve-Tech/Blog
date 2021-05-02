@@ -2,42 +2,10 @@
 id: 1206
 title: 'How to compile and use Facebook Research’s Craftassist'
 date: 2019-09-15T10:48:04+10:00
-author: SteveTech
+author: Steve-Tech
 layout: post
 guid: /?p=1206
 permalink: /2019/09/15/compile-and-use-facebook-researchs-craftassist/
-onesignal_meta_box_present:
-  - "1"
-  - "1"
-onesignal_send_notification:
-  - ""
-  - ""
-uuid:
-  - 72715951-71dd-be6d-b1fc-ab5ba458ded7
-  - 72715951-71dd-be6d-b1fc-ab5ba458ded7
-response_body:
-  - '{"id":"464514a5-8250-4d9b-ba62-dab7490cf79f","recipients":105,"external_id":"72715951-71dd-be6d-b1fc-ab5ba458ded7","warnings":["You must configure iOS notifications in your OneSignal settings if you wish to send messages to iOS users."]}'
-  - '{"id":"464514a5-8250-4d9b-ba62-dab7490cf79f","recipients":105,"external_id":"72715951-71dd-be6d-b1fc-ab5ba458ded7","warnings":["You must configure iOS notifications in your OneSignal settings if you wish to send messages to iOS users."]}'
-status:
-  - "200"
-  - "200"
-recipients:
-  - "105"
-  - "105"
-notification_id:
-  - 464514a5-8250-4d9b-ba62-dab7490cf79f
-  - 464514a5-8250-4d9b-ba62-dab7490cf79f
-ampforwp_custom_content_editor:
-  - ""
-  - ""
-ampforwp_custom_content_editor_checkbox:
-  - ""
-  - ""
-ampforwp-amp-on-off:
-  - default
-  - default
-amp-cf7-form-checker:
-  - "1"
 categories:
   - Standard News
   - Tutorials
