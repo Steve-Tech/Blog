@@ -31,4 +31,5 @@ You shouldn't need to touch the flash, and it's not really useful since it's onl
 ## Additional Notes
 * My TS-453Be doesn't support booting from NVMe since I have a QM2, you can only boot from USB, the first 2 bays or the flash.
 * When installing to USB you should setup 2 USB drives as a mirror so if one dies you don't have to reinstall or lose any data.
+* If your multigigabit NIC doesn't work with TrueNAS, add `if_atlantic_load=YES` to your tunables, running `kldload if_atlantic.ko` can be used to temporarily load the driver if you have no network connectivity.
 * There is also a [really old guide to installing debian on a QNAP](https://wiki.qnap.com/wiki/Debian_Installation_On_QNAP).
