@@ -3,10 +3,10 @@ layout: post
 title:  "Install another OS on to a QNAP NAS"
 author: Steve-Tech
 ---
-I saw someone else on [r/QNAP install Windows Server on their TS-253Be](https://www.reddit.com/r/qnap/comments/fndgcr/windows_server_2012_and_2016_works_on_ts253be/) a while ago, and I really wanted to do the same with my TS-453Be, so I'm writing this guide to show others what I've done.
+I saw someone else on [r/QNAP install Windows Server on their TS-253Be](https://www.reddit.com/r/qnap/comments/fndgcr/windows_server_2012_and_2016_works_on_ts253be/) a while ago, and I really wanted to do the same with my TS-453Be, so I'm writing this guide to show others what I've done. This should work with TrueNAS/FreeNAS/BSD, Linux or Windows; basically any x86_64 operating system.
 
 ## Preperation
-* You will need at least 2 USBs, 1 for the installer and one to install to, unless you are installing to one of the drives.
+* You will need at least 2 USBs, 1 for the installer and one to install to (this one should be fairly high quality, eg. an SSD), unless you are installing to one of the bays.
 * You will also need a monitor, keyboard and optionally a mouse.
 
 ## Optionally Backup the Flash
@@ -19,7 +19,7 @@ You shouldn't need to touch the flash, and it's not really useful since it's onl
 2. While the NAS is starting mash (or hold) the `DEL` (or `ESC`) key which will let you get into the BIOS
 
     [![BIOS](/assets/img/QNAP-BIOS.gif){:width="50%"}](/assets/img/QNAP-BIOS.gif)
-3. When in the BIOS you will want to re-arrange the boot order to make sure that the NAS will start whatever you are installing, eg. Disable or move 'QNAP OS' so isn't going to start up
+3. When in the BIOS you will want to re-arrange the boot order to make sure that the NAS will start whatever you are installing, eg. Installer first, other drive second, disable or move 'QNAP OS' so isn't going to start up
     
     Default Boot Order | My Boot Order
     --- | ---
@@ -27,6 +27,7 @@ You shouldn't need to touch the flash, and it's not really useful since it's onl
 4. Save Changes and Reset
 
     [![BIOS](/assets/img/QNAP-BIOS3.jpg){:width="50%"}](/assets/img/QNAP-BIOS3.jpg)
+5. The NAS should boot to the installer, and you can install from there.
 
 ## Additional Notes
 * My TS-453Be doesn't support booting from NVMe since I have a QM2, you can only boot from USB, the first 2 bays or the flash.
