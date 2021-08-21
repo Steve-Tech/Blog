@@ -30,7 +30,7 @@ You should always have the nearest hosting for your target area so your customer
   * <a href="http://www.securedatacentre.com.au/" target="_blank">Secure Data Centre</a> &#8211; Darwin
 
 #### Queensland:
-  * <a href="http://www.rackservers.com.au/secure/aff.php?aff=168" target="_blank">Rackservers</a> (Affilate Link) &#8211; Brisbane
+  * <a href="http://www.rackservers.com.au/secure/aff.php?aff=168" target="_blank">Rackservers</a> (Referral Link) &#8211; Brisbane
   * <a href="https://www.queenslandhosting.com.au/" target="_blank">Queensland Hosting</a>
   * <a href="https://www.newsprout.com.au/" target="_blank">Newsprout</a> &#8211; Brisbane (infrastructure)
 
@@ -48,7 +48,7 @@ You should always have the nearest hosting for your target area so your customer
   * <a href="https://techquity.com.au/" target="_blank">Techquity</a>
 
 #### Victoria:
-  * <a href="https://ventraip.com.au/" target="_blank">VentraIP</a>
+  * <a href="https://getonline.vip/NssVqBon" target="_blank">VentraIP</a> (Referral Link)
   * <a href="https://www.hostingaustralia.com.au/" target="_blank">Australian Web Hosting</a> &#8211; Melbourne
   * <a href="http://www.web-hosting-melbourne.com.au/" target="_blank">Web Hosting Melbourne</a> &#8211; Melbourne
   * <a href="https://www.hostingbay.com.au/" target="_blank">Hosting Bay</a> &#8211; Melbourne
