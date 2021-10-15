@@ -24,8 +24,9 @@ I have a QNAP QSW-M408-4C and I was wondering what the serial console port was u
 * Run `ls /dev/tty*` to find the Serial Adapter (usually starts with /dev/ttyUSB or /dev/ttyS)
 * Run `screen [adapter path] 115200` to connect
 
-#### Logging in
-* Press enter then enter the username and password used for the web interface
+#### Logging in/out
+* Press enter then enter the same username and password used for the web interface
+* When logging out type `exit` to quit the session
 
 ## Scripts
 There's multiple scripts just lying around on the switch that can be used for various things. You can find them all with `find / -name *.sh`.
