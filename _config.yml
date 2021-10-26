@@ -45,6 +45,7 @@ disqus:
   shortname: jas-tech
 
 google_analytics: UA-99913981-1
+google_tags: GTM-NKSH457
 
 # excerpt_separator: <!--more-->
 
