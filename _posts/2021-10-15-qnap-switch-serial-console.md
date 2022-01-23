@@ -4,7 +4,7 @@ title:  "Things you can do with a QNAP Switch's Serial Console"
 author: Steve-Tech
 ---
 
-I have a QNAP QSW-M408-4C and I was wondering what the serial console port was used for, especially since it wasn't documented anywhere. Well it turns out it's a full TTY in LEDE Linux. Thanks to [u/sinisterpisces's post](https://www.reddit.com/r/qnap/comments/ofv6ge/qswm21082c_console_port_do_i_need_a_special_usb/) who inspired me to find out more about it.
+I have a QNAP QSW-M408-4C and I was wondering what the serial console port was used for, especially since it wasn't documented anywhere. Well it turns out it's a full TTY terminal in LEDE Linux. Thanks to [u/sinisterpisces's post](https://www.reddit.com/r/qnap/comments/ofv6ge/qswm21082c_console_port_do_i_need_a_special_usb/) who inspired me to find out more about it.
 
 ## Requirements
 * You will need a Cisco compatible RJ45 Console Port to Serial/USB adapter
@@ -47,7 +47,9 @@ There's multiple scripts just lying around on the switch that can be used for va
 
 #### Here's a few of the ones I've looked at:
 * `sys_stat.sh` Gets/sets fan speeds, temp, rtc, leds, memory, reset, i2c, and mode (`--help` works)
-* `isscli.sh` Uses some hidden API on tcp://localhost:6023 (Blocked by iptables)
+* `isscli.sh` "Aricent Intelligent Switch Solution" CLI (also on `tcp://localhost:6023`, blocked externally by iptables)
+* `runisscmd.sh` Runs piped input as a command on the CLI (eg. `echo "help" | runisscmd.sh`)
+* `luacli.sh` "LUA CLI shell", (`?` for help, some things cause switch to crash)
 * `isspass.sh` Sets the UI Password using said API using the MAC Address as the old password
 * `reg_boardinfo.sh` Sets MAC, Serial and Model (I think)
 * `fan_ctrl.sh` & `led.sh` Self explanatory but doesn't seem to work
@@ -55,14 +57,31 @@ There's multiple scripts just lying around on the switch that can be used for va
 ## Remote Access
 #### Enabling SSH
 The switch seems to have SSH enabled by default but it's blocked by `iptables`, here's how to unblock it:
+
+#### Enable SSH until reboot
 * Type `iptables -L INPUT 2` and you should get `DROP tcp -- anywhere anywhere tcp dpt:ssh`
 * If you do type `iptables -D INPUT 2`
 * If you don't type `iptables -L INPUT --line-numbers | grep ssh` then `iptables -D INPUT [line number]`
-* I don't believe this will unblock it permanently but tell me if it does
 
-#### Enabling the API
-The switch uses this API on port 6023 internally but unless you want to create your own management interface on another computer there isn't much point, in fact this is kind of a security hole so don't do it unless you have a good reason:
+#### Enable SSH permanently
+* Edit `/etc/firewall.user`
+	* eg. `vi /etc/firewall.user`
+* Add a `#` to the beginning of the line that says `iptables -A INPUT -i cpsstap -p tcp --dport 22 -j DROP` (likely line 2)
+	* press `i` to insert in vi
+* Save and reboot
+	* `ESC` + `:wq` to save in vi
+	* `reboot` to reboot in linux
+
+#### Enabling the Aricent CLI
+You could do the same to enable the "Aricent Intelligent Switch Solution" CLI on port 6023, but it has a built in username and password on the "debug" user (security issue), and it's already accessible through SSH (especially with `isscli.sh`), so there isn't much point:
 * Do the same as SSH but grep port 6023, it's line 3 for me.
+
+## Upgrading Firmware
+* Download the firmware from the QNAP site onto the switch: `wget <url>`
+* Extract the firmware: `tar -xvf <file name>.img`
+* Run `./firmware_update.sh`
+
+You might think `qsw_fwupgrade.sh` from above would do something, it doesn't.
 
 ## Additional Things
 #### Installing Packages
