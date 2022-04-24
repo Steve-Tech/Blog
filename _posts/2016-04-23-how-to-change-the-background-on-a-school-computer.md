@@ -1,13 +1,7 @@
 ---
-id: 1061
+layout: post
 title: How to Change the Desktop Background on a School/Work Computer
 date: 2016-04-23T13:52:51+10:00
-author: Steve-Tech
-layout: post
-guid: /?p=1061
-permalink: /2016/04/23/how-to-change-the-background-on-a-school-computer/
-categories:
-  - Tutorials
 ---
 1. Download Background Changer - [Graphical Background Changer.vbs](\assets\downloads\Graphical%20Background%20Changer.vbs)
 2. Find the Picture you want then Shift + Right Click it then Select &#8220;Copy as path&#8221;

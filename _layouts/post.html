@@ -4,12 +4,12 @@ layout: template
 <article class="mx-2" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header>
-    <h2 itemprop="name headline">{{ page.title | escape }}</h2>
-    <p>
-      <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+      <time class="small text-muted" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
         {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
         {{ page.date | date: date_format }}
       </time>
+    <h3 itemprop="name headline">{{ page.title | escape }}</h3>
+    <p>
       {%- if page.author -%}
       {%- if site.data.authors contains page.author -%}
       {% assign author = site.data.authors[page.author] %}

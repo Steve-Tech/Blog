@@ -1,19 +1,7 @@
 ---
-id: 1009
+layout: post
 title: Best Australian Hosting for your location
 date: 2018-07-30T10:07:33+10:00
-author: Steve-Tech
-layout: post
-guid: /?p=1009
-permalink: /2018/07/30/best-australian-hosting/
-categories:
-  - Tutorials
-tags:
-  - Aussie
-  - Australian
-  - hosting
-  - location
-  - state
 ---
 You should always have the nearest hosting for your target area so your customers can have fast load times. A study by the Aberdeen Group revealed that &#8220;a 1-second delay in page load time equals 11% fewer page views, a 16% decrease in customer satisfaction, and 7% loss in conversions.&#8221;<!--more-->
 

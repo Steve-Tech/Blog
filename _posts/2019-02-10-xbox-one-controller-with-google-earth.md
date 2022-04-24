@@ -1,13 +1,7 @@
 ---
-id: 1130
+layout: post
 title: How to get an Xbox One Controller to work with Google Earth Flight Simulator
 date: 2019-02-10T13:30:44+10:00
-author: Steve-Tech
-layout: post
-guid: /?p=1130
-permalink: /2019/02/10/xbox-one-controller-with-google-earth/
-categories:
-  - Uncategorized
 ---
 Are you so bored that you decide that you want to play the Google Earth flight simulator but find out that the keyboard controls are horrible so you grab your Xbox One controller and it doesn’t work, well I have some good news for you.
 

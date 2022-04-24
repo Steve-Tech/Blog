@@ -1,7 +1,6 @@
 ---
 layout: post
 title:  "How to update Windows Subsystem for Android from MSIX"
-author: Steve-Tech
 ---
 
 I just happened to realise that the version of Windows Subsystem for Android on [store.rg-adguard.net](https://store.rg-adguard.net/) has updated from 1.7.32815.0 to 2203.40000.1.0 so here's a guide on how to update it without loosing installed apps.

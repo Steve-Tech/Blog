@@ -1,14 +1,7 @@
 ---
-id: 1206
+layout: post
 title: 'How to compile and use Facebook Research’s Craftassist'
 date: 2019-09-15T10:48:04+10:00
-author: Steve-Tech
-layout: post
-guid: /?p=1206
-permalink: /2019/09/15/compile-and-use-facebook-researchs-craftassist/
-categories:
-  - Standard News
-  - Tutorials
 ---
 **UPDATE:** These instructions are likely out-dated, and Facebook has made the instructions on their [GitHub](https://github.com/facebookresearch/craftassist) easier as well, please follow those before attempting mine.
 
