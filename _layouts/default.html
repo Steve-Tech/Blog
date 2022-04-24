@@ -1,23 +1,38 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+<html lang="{{ page.lang | default: site.lang | default: " en" }}">
 
-  {%- include head.html -%}
+<head>
+    <title>Stephen Horvath</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <link rel="stylesheet" type="text/css" href="/assets/bootstrap-zephyr.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css"
+        integrity="sha512-Oy+sz5W86PK0ZIkawrG0iv7XwWhYecM3exvUtMKNJMekGFJtVAhibhRPTpmyTj8+lJCkmWfnpxKgT2OopquBHA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Roboto&family=Source+Code+Pro&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/assets/style.css">
+    <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
+    <link rel="icon" type="image/png" href="/assets/img/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/assets/img/favicon-16x16.png" sizes="16x16">
 
-  <body>
+</head>
 
-    {%- include header.html -%}
-
-    <main class="page-content" aria-label="Content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
-    </main>
-
-    {%- include adsense-display.html -%}
-
-    {%- include footer.html -%}
-    {%- include foot.html -%}
-
-  </body>
+<body>
+    <div id="container" class="container my-sm-3 my-lg-4 text-center">
+        <div class="bg-white row corners">
+            {{ content }}
+        </div>
+    </div>
+    <div class="d-flex justify-content-center my-3">
+        <span class="bg-white corners py-2 px-4">
+            &copy; Stephen Horvath {{ 'now' | date: "%Y" }}
+        </span>
+    </div>
+</body>
 
 </html>
