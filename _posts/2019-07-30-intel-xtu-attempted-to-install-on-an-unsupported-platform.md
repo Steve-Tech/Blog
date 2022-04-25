@@ -3,7 +3,7 @@ layout: post
 title: 'Intel XTU ‘Attempted to install on an unsupported platform’'
 date: 2019-07-30T19:50:47+10:00
 ---
-I was recently wanting to mess around with the CPU clocks on my laptop which is a Surface Book 2 using Intel Extreme Tuning Utility, but whenever I tried to install it I was greeted by an error dialogue that said ‘Attempted to install on an unsupported platform’. This is how I fixed it&#8230;
+I was recently wanting to mess around with the CPU clocks on my laptop which is a Surface Book 2 using Intel Extreme Tuning Utility, but whenever I tried to install it I was greeted by an error dialogue that said ‘Attempted to install on an unsupported platform’. This is how I fixed it&hellip;<!--more-->
 
   1. Download the official [Intel XTU](https://downloadcenter.intel.com/download/24075/Intel-Extreme-Tuning-Utility-Intel-XTU-)
   2. Open it until you get to the error but do not close it

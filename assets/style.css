@@ -79,10 +79,13 @@ a:hover {
     color: var(--bs-primary);
 }
 
+.name, .sourcecodepro {
+    font-family: 'Source Code Pro', monospace, serif;
+}
+
 .name {
     font-weight: 300;
     font-size: 1.6rem;
-    font-family: 'Source Code Pro', monospace, serif;
 }
 
 .name .last {

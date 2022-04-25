@@ -3,7 +3,7 @@ layout: post
 title:  "Install the PiKVM Arduino HID on other Boards"
 ---
 
-This is just a short guide to compiling and uploading the PIKVM Arduino HID onto other boards. I will be using the Arduino Leonardo as an example.
+This is just a short guide to compiling and uploading the PIKVM Arduino HID onto other boards. I will be using the Arduino Leonardo as an example.<!--more-->
 
 #### Requirements
 * The boards that you are compiling must be supported by [HID-Project](https://github.com/NicoHood/HID) since this is a library that PiKVM uses

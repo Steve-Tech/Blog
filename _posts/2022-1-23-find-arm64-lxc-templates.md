@@ -3,7 +3,7 @@ layout: post
 title:  "Where you can find ARM64 LXC Templates"
 ---
 
-I was just experimenting with [Pimox](https://github.com/pimox/pimox7) on a Raspberry Pi 4 and was wondering where I could download the ARM64 LXC templates for [Proxmox](https://www.proxmox.com/).
+I was just experimenting with [Pimox](https://github.com/pimox/pimox7) on a Raspberry Pi 4 and was wondering where I could download the ARM64 LXC templates for [Proxmox](https://www.proxmox.com/).<!--more-->
 
 #### [Canonical Image Server](https://uk.lxd.images.canonical.com/images/)
 URL: [https://uk.lxd.images.canonical.com/images/](https://uk.lxd.images.canonical.com/images/)

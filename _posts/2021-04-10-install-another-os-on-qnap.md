@@ -2,7 +2,7 @@
 layout: post
 title:  "Install another OS on to a QNAP NAS"
 ---
-I saw someone else on [r/QNAP install Windows Server on their TS-253Be](https://www.reddit.com/r/qnap/comments/fndgcr/windows_server_2012_and_2016_works_on_ts253be/) a while ago, and I really wanted to do the same with my TS-453Be, so I'm writing this guide to show others what I've done. This should work with TrueNAS/FreeNAS/BSD, Linux or Windows; basically any x86_64 operating system.
+I saw someone else on [r/QNAP install Windows Server on their TS-253Be](https://www.reddit.com/r/qnap/comments/fndgcr/windows_server_2012_and_2016_works_on_ts253be/) a while ago, and I really wanted to do the same with my TS-453Be, so I'm writing this guide to show others what I've done. This should work with TrueNAS/FreeNAS/BSD, Linux or Windows; basically any x86_64 operating system.<!--more-->
 
 #### Preperation
 * You will need at least 2 USBs, 1 for the installer and one to install to (this one should be fairly high quality, eg. an SSD), unless you are installing to one of the bays.
