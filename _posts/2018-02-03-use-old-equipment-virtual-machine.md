@@ -17,5 +17,5 @@ I have an old slide scanner that only works with Windows 98 and I was wondering 
 
   1. Plug in the device you want to use into your computer and open VMware Workstation Player
   2. Find an image of Windows 98 ([here](https://winworldpc.com/product/windows-98/98-second-edition)) or the version that works with your device and Install it in VMware Workstation
-  3. Connect the device to your Virtual Machine<img class="aligncenter wp-image-921 size-full" src="{% link /assets/img/articles/use-old-equipment-virtual-machine/Windows-98-VM-Connect.png %}" alt="" width="900" height="420" />
+  3. Connect the device to your Virtual Machine<img class="aligncenter wp-image-921 size-full" src="{% link /img/articles/use-old-equipment-virtual-machine/Windows-98-VM-Connect.png %}" alt="" width="900" height="420" />
   4. Install any needed Drivers and your done

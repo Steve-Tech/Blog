@@ -17,15 +17,15 @@ You shouldn't need to touch the flash, and it's not really useful since it's onl
 1. Shutdown the NAS, plug everything in, then start it up
 2. While the NAS is starting mash (or hold) the `DEL` (or `ESC`) key which will let you get into the BIOS
 
-    [![BIOS](/assets/img/articles/QNAP/QNAP-BIOS.gif){:width="50%"}](/assets/img/articles/QNAP/QNAP-BIOS.gif)
+    [![BIOS](/img/articles/QNAP/QNAP-BIOS.gif){:width="50%"}](/img/articles/QNAP/QNAP-BIOS.gif)
 3. When in the BIOS you will want to re-arrange the boot order to make sure that the NAS will start whatever you are installing, eg. Installer first, other drive second, disable or move 'QNAP OS' so isn't going to start up
     
     Default Boot Order | My Boot Order
     --- | ---
-    [![Default Boot Order](/assets/img/articles/QNAP/QNAP-BIOS1.jpg)](/assets/img/articles/QNAP/QNAP-BIOS1.jpg) | [![My Boot Order](/assets/img/articles/QNAP/QNAP-BIOS2.jpg)](/assets/img/articles/QNAP/QNAP-BIOS2.jpg)
+    [![Default Boot Order](/img/articles/QNAP/QNAP-BIOS1.jpg)](/img/articles/QNAP/QNAP-BIOS1.jpg) | [![My Boot Order](/img/articles/QNAP/QNAP-BIOS2.jpg)](/img/articles/QNAP/QNAP-BIOS2.jpg)
 4. Save Changes and Reset
 
-    [![BIOS](/assets/img/articles/QNAP/QNAP-BIOS3.jpg){:width="50%"}](/assets/img/articles/QNAP/QNAP-BIOS3.jpg)
+    [![BIOS](/img/articles/QNAP/QNAP-BIOS3.jpg){:width="50%"}](/img/articles/QNAP/QNAP-BIOS3.jpg)
 5. The NAS should boot to the installer, and you can install from there.
 
 #### Additional Notes

@@ -8,7 +8,7 @@ Are you so bored that you decide that you want to play the Google Earth flight s
 It turns out that Google Earth already supports Xbox 360 controllers and the newer versions of Windows 10 have some backward compatibility built in for ‘games’ that are only compatible with Xbox 360 controllers and not the One, but if you aren’t running Windows 10 here’s a little workaround.
 
   
-[Download xbox_one.ini](/assets/downloads/xbox_one.ini)
+[Download xbox_one.ini](/downloads/xbox_one.ini)
   
 
 
