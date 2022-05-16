@@ -32,7 +32,7 @@ Pin 3 2N2222 -> RST
 4. Under `[env]` change the platform and board to match step 2.
 
 	Leonardo example:
-	```
+	```ini
 	platform = atmelavr
 	board = leonardo
 	```

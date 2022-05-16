@@ -35,18 +35,20 @@ There's multiple scripts just lying around on the switch that can be used for va
 
 **Here's a clean list:**
 
-    root@LEDE:/admin# ls /usr/bin/*.sh /bin/*.sh /sbin/*.sh /etc/*.sh
-    /bin/ipcalc.sh               /usr/bin/firmware_update.sh
-    /etc/diag.sh                 /usr/bin/genenvs.sh
-    /etc/reg_boardinfo.sh        /usr/bin/isscli.sh
-    /etc/setvlans.sh             /usr/bin/issip.sh
-    /etc/start_service.sh        /usr/bin/issnet2tap.sh
-    /sbin/fan_ctrl.sh            /usr/bin/isspass.sh
-    /sbin/led.sh                 /usr/bin/issswname.sh
-    /sbin/prepare_system.sh      /usr/bin/luacli.sh
-    /sbin/qsw_fwupgrade.sh       /usr/bin/runisscmd.sh
-    /usr/bin/evdisp.sh           /usr/bin/setmode.sh
-    /usr/bin/event.sh            /usr/bin/sys_stat.sh
+```sh
+root@LEDE:/admin# ls /usr/bin/*.sh /bin/*.sh /sbin/*.sh /etc/*.sh
+/bin/ipcalc.sh               /usr/bin/firmware_update.sh
+/etc/diag.sh                 /usr/bin/genenvs.sh
+/etc/reg_boardinfo.sh        /usr/bin/isscli.sh
+/etc/setvlans.sh             /usr/bin/issip.sh
+/etc/start_service.sh        /usr/bin/issnet2tap.sh
+/sbin/fan_ctrl.sh            /usr/bin/isspass.sh
+/sbin/led.sh                 /usr/bin/issswname.sh
+/sbin/prepare_system.sh      /usr/bin/luacli.sh
+/sbin/qsw_fwupgrade.sh       /usr/bin/runisscmd.sh
+/usr/bin/evdisp.sh           /usr/bin/setmode.sh
+/usr/bin/event.sh            /usr/bin/sys_stat.sh
+```
 
 **Here's a few of the ones I've looked at:**
 
