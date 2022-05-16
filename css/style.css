@@ -23,6 +23,10 @@ body {
     animation: gradient-spin 60s linear infinite;
 }
 
+iframe {
+    color-scheme: auto;
+}
+
 h1,
 h2,
 h3,
@@ -73,8 +77,8 @@ img {
     list-style: none;
 }
 
-@media (max-width: 575.98px){
-    .container > .corners {
+@media (max-width: 575.98px) {
+    .container>.corners {
         border-radius: 0 0 2rem 2rem;
     }
 }
