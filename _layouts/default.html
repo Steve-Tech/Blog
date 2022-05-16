@@ -28,6 +28,10 @@
 </head>
 
 <body>
+    {%- if jekyll.environment == 'production' and site.google_tags -%}
+    {%- include google-tags-noscript.html -%}
+    {%- endif -%}
+
     <div id="container" class="container my-sm-3 my-lg-4 text-center">
         <main class="bg-white row corners">
             {{ content }}
@@ -39,8 +43,7 @@
         </span>
     </div>
 
-    {%- if jekyll.environment == 'production' and site.google_tags -%}
-    {%- include google-tags-noscript.html -%}
+    {%- if jekyll.environment == 'production' -%}
     {%- include sovrn-commerce.html -%}
     {%- endif -%}
 </body>
