@@ -1,0 +1,7 @@
+/2016/:month/:date/* /posts/:splat 301
+/2017/:month/:date/* /posts/:splat 301
+/2018/:month/:date/* /posts/:splat 301
+/2019/:month/:date/* /posts/:splat 301
+/2020/:month/:date/* /posts/:splat 301
+/2021/:month/:date/* /posts/:splat 301
+/2022/:month/:date/* /posts/:splat 301
