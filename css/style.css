@@ -83,6 +83,12 @@ img {
     }
 }
 
+@media only print {
+    body {
+        background: #fff;
+    }
+}
+
 @media only print and (max-width: 991.98px) {
     #container {
         margin-top: 0 !important;
