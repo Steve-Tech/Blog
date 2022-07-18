@@ -50,7 +50,8 @@ h6,
 .h3,
 .h4,
 .h5,
-.h6 {
+.h6,
+.table {
     color: var(--bs-body-color);
 }
 
@@ -75,6 +76,10 @@ img {
 
 .ls-none {
     list-style: none;
+}
+
+.highlight {
+    color: var(--bs-light);
 }
 
 @media (max-width: 575.98px) {

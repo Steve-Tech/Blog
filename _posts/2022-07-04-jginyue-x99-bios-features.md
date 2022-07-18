@@ -16,6 +16,7 @@ All of this article is my own findings but [Miyconst's video](https://youtu.be/9
 - VT-x
 - VT-d
 - ACS
+- ARI Forwarding
 
 ##### Networking
 - 2 &times; RTL8111/8168/8411 PCI Express Gigabit Ethernet Controllers

@@ -81,10 +81,23 @@ The switch seems to have SSH enabled by default but it's blocked by `iptables`, 
 	* `ESC` + `:wq` to save in vi
 	* `reboot` to reboot in linux
 
-**Enabling the Aricent CLI**
+**Other Ports**
 
-You could do the same to enable the "Aricent Intelligent Switch Solution" CLI on port 6023, but it has a built in username and password on the "debug" user (security issue), and it's already accessible through SSH (especially with `isscli.sh`), so there isn't much point:
-* Do the same as SSH but grep port 6023, it's line 3 for me.
+|Line|Port|Comment|
+|---|---|---|
+|1|161|SNMP (Community: `NETMAN` or `PUBLIC`)|
+|2|22|SSH|
+|3|6080|Aricent Web GUI (Seems to require IE or an older browser)|
+|4|6023|Aricent Telnet CLI (Can already be used though the console using `isscli.sh`)|
+|6|8080|uhttpd Webserver|
+|8|69|TFTP? Doesn't seem to be listening|
+|9|12345|ISS408wt.exe is listening|
+|10|12346|ISS408wt.exe is listening|
+|11|31337|ISS408wt.exe is listening|
+|12|31338|ISS408wt.exe is listening|
+{: .table }
+
+The Aricent interfaces can be accessed using the admin username and password, or the debug username and password present in `/usr/bin/runisscmd.sh`. I believe the debug password is the same on every switch, so I wouldn't recommend allowing them.
 
 #### Upgrading Firmware
 * Download the firmware from the QNAP site onto the switch: `wget <url>`
@@ -102,4 +115,4 @@ To install packages with `opkg`:
 
 **Config**
 
-There's also some extra VLAN config in `/etc/iss_vlan.txt` that might let you tag VLAN 1.
+There's also some extra VLAN config in `/etc/iss_vlan.txt` that might let you tag VLAN 1, otherwise I'm sure the Aricent interface will.
