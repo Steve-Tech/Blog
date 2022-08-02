@@ -3,19 +3,22 @@ layout: template
 ---
 
 {%- if site.posts.size > 0 -%}
-<ul class="ls-none ps-0 mx-2">
+<ul class="h-feed ls-none ps-0 mx-2">
   {%- for post in site.posts -%}
-  <li class="mb-3">
-    {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-    <span class="small text-muted">{{ post.date | date: date_format }}</span>
-    <h3>
-      <a href="{{ post.url | relative_url }}">
+  <li class="h-entry mb-3">
+    <time class="dt-published small text-muted" datetime="{{ post.date | date_to_xmlschema }}">
+      {{ post.date | date: site.date_format }}
+    </time>
+    <h3 class="p-name">
+      <a class="u-url" href="{{ post.url | relative_url }}">
         {{ post.title | escape }}
       </a>
     </h3>
-    {%- if site.show_excerpts -%}
-    {{ post.excerpt }}
-    {%- endif -%}
+    <div class="p-summary">
+      {%- if site.show_excerpts -%}
+      {{ post.excerpt }}
+      {%- endif -%}
+    </div>
   </li>
   {% assign divisible = forloop.index | modulo: 3 %}
   {% if divisible == 0 %}

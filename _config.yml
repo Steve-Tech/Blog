@@ -27,6 +27,8 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://stevetech.me" # the base hostname & protocol for your site, e.g. http://example.com
 permalink: /:collection/:title
 
+date_format: "%b %-d, %Y"
+
 # social links
 # twitter_username: 
 github_username: Steve-Tech
@@ -51,6 +53,9 @@ google_tags: GTM-NKSH457
 excerpt_separator: <!--more-->
 
 highlighter: rouge
+
+include:
+  - _redirects
 
 # If you want to link only specific pages in your header, uncomment
 # this and add the path to the pages in order as they should show up

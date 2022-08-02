@@ -1,33 +1,35 @@
 ---
 layout: template
 ---
-<article class="mx-2" itemscope itemtype="http://schema.org/BlogPosting">
+<article class="h-entry mx-2" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header>
-      <time class="small text-muted" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        {{ page.date | date: date_format }}
-      </time>
-    <h3 itemprop="name headline">{{ page.title | escape }}</h3>
+    <a class="u-url d-none" href="{{ page.url | relative_url }}" hidden></a>
+    <time class="dt-published small text-muted" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+      {{ page.date | date: site.date_format }}
+    </time>
+    <h3 class="p-name" itemprop="name headline">{{ page.title | escape }}</h3>
     <p>
       {%- if page.author -%}
       {%- if site.data.authors contains page.author -%}
       {% assign author = site.data.authors[page.author] %}
-      • <a href="{% if author.github != nul %}{{ author.github }}{% else %}{{ author.url }}{% endif %}"><span
-          itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card"
-            itemprop="name">{{ page.author }}</span></span></a>
+      &bull; <a href="{% if author.github != nul %}{{ author.github }}{% else %}{{ author.url }}{% endif %}">
+        <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <span class="p-author h-card" itemprop="name">{{ page.author }}</span>
+        </span>
+      </a>
       {%- else -%}
-      • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card"
-          itemprop="name">{{ page.author }}</span></span>
+      &bull; <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span class="p-author h-card" itemprop="name">{{ page.author }}</span>
+      </span>
       {%- endif -%}
       {%- endif -%}
     </p>
   </header>
 
-  <div itemprop="articleBody">
+  <div class="e-content" itemprop="articleBody">
     {{ content }}
   </div>
-
 
   {%- include adsense-display.html -%}
 
@@ -35,5 +37,9 @@ layout: template
   {%- include disqus_comments.html -%}
   {%- endif -%}
 
-  <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
+  <p class="text-center mt-3 mb-0">
+    I'm sorry about the ads, I don't like them either.<br/>
+    If I helped you please <a href="https://www.buymeacoffee.com/stephen.horvath">buy me a croissant</a>,
+    so I can consider removing the ads.
+  </p>
 </article>
