@@ -10,7 +10,9 @@ I've also made a custom [lm-sensors config file](https://gist.github.com/Steve-T
 
 All of this article is my own findings but [Miyconst's video](https://youtu.be/9v5s42DEC3I) is worth checking out.
 
-#### Important Features
+#### Important Features & Notes
+##### AER Errors
+If you experience AER errors in Linux, they can be avoided by disabling PCI-E ASPM, you will need to disable it globally and then go through each IIO Socket setting PCI-E ASPM to Disabled. This is common with other X99 motherboards.
 ##### Virtualisation
 - SR-IOV
 - VT-x
@@ -25,12 +27,12 @@ All of this article is my own findings but [Miyconst's video](https://youtu.be/9
 
 ##### PCIe Slots
 - PCIe 2.0 x1 - Chipset
-- PCIe 3.0 x4 - NVMe, CPU0
+- PCIe 3.0 x4 (M.2 M Key) - CPU0
 - PCIe 3.0 x16 - CPU0
 - PCIe 2.0 x1 - Chipset
-- PCIe 3.0 x4 - NVMe, CPU1
+- PCIe 3.0 x4 (M.2 M Key) - CPU1
 - PCIe 3.0 x16 - CPU1
-- PCIe 3.0 x8 - CPU0
+- PCIe 3.0 x8 (Physically x16) - CPU0
 
 The PCIe x1 slots can easily be cut open using small side cutters to fit a card bigger than x1, but using a bigger card will obstruct an M.2 SSD.
 
