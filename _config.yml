@@ -69,3 +69,7 @@ plugins:
  - jekyll-feed
  - jekyll-seo-tag
  - jekyll-sitemap
+
+bootswatch:
+  version: 5
+  name: zephyr

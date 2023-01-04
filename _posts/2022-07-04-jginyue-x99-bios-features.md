@@ -39,6 +39,7 @@ The PCIe x1 slots can easily be cut open using small side cutters to fit a card 
 ##### Miscellaneous
 - SATA 3.0, using SATA & sSATA Controllers
 - 8 Channel RAM (2 CPUs &times; 4 Channels)
+- PCIe Bifurcation Settings
 - ECC & Non-ECC RAM Supported
 
 #### `dmidecode` BIOS Information
@@ -121,7 +122,7 @@ BIOS Information
     - iSCSI Initiator Name
     - Add an Attempt
     - Delete Attempts
-    - Change Attemp Order
+    - Change Attempt Order
 - PCI Subsystem Settings
     - PCI Latency Timer
     - PCI-X Latency Timer

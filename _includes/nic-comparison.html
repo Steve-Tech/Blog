@@ -1,0 +1,77 @@
+<br>
+<div class="table-responsive">
+<table class="table bg-white">
+    <thead>
+        <tr>
+            <th>Feature</th>
+            <th>Aquantia AQC107</th>
+            <th>HP NC552SFP</th>
+            <th>Intel X520-DA1</th>
+            <th>Mellanox MCX311A-XCAT EN</th>
+            <th>Solarflare SFN5122F</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">Ports</th>
+            <td>1</td>
+            <td>2</td>
+            <td>1</td>
+            <td>1</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <th scope="row">Port Type</th>
+            <td>Ethernet</td>
+            <td>SFP+</td>
+            <td>SFP+</td>
+            <td>SFP+</td>
+            <td>SFP+</td>
+        </tr>
+        <tr>
+            <th scope="row">Port Speed</th>
+            <td>100Mb/1GbE/2.5GbE/5GbE/10GbE</td>
+            <td>1GbE/10GbE</td>
+            <td>1GbE/10GbE</td>
+            <td>1GbE/10GbE</td>
+            <td>1GbE/10GbE</td>
+        </tr>
+        <tr>
+            <th scope="row">PCIe</th>
+            <td>PCIe 3.0 x4</td>
+            <td>PCIe 2.0 x8</td>
+            <td>PCIe 2.0 x8</td>
+            <td>PCIe 3.0 x4</td>
+            <td>PCIe 2.0 x8</td>
+        </tr>
+        <tr>
+            <th scope="row">SR-IOV</th>
+            <td><i class="bi bi-x-lg"></i></td>
+            <td>Windows Only<sup>1</sup></td>
+            <td><i class="bi bi-check-lg"></i></td>
+            <td>Not Working<sup>2</sup></td>
+            <td>Windows Only<sup>1a</sup></td>
+        </tr>
+        <tr>
+            <th scope="row">Max VFs per Port*</th>
+            <td></td>
+            <td>32</td>
+            <td>63</td>
+            <td>63</td>
+            <td>127</td>
+        </tr>
+    </tbody>
+</table>
+
+<ul class="small ls-none ps-0">
+    <li>* May not be correct if I couldn't get it working.</li>
+    <li><sup>1</sup> Linux support seems to have been dropped. I'm sure someone could get it working on newer versions of Linux, but I couldn't on Debian 11.
+        <ul class="ls-none">
+            <li><sup>1a</sup> The `sfc_siena` module has replaced `sfc` on this series, and the utilities don't work anymore.</li>
+        </ul>
+    </li>
+    <li><sup>2</sup> I tried following <a
+            href="https://forums.servethehome.com/index.php?threads/sr-iov-for-mellanox-connectx-2.12693/#post-121167">this
+            guide</a>, but it still didn't work.</li>
+</ul>
+</div>
