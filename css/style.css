@@ -101,6 +101,10 @@ img {
 }
 
 @media only screen and (prefers-color-scheme: dark) {
+    :root {
+        color-scheme: dark;
+    }
+
     .text-muted {
         color: var(--bs-gray-500) !important;
     }
@@ -123,6 +127,18 @@ img {
 
     a:hover {
         color: var(--bs-primary);
+    }
+}
+
+
+@media only screen {
+    /* Changes for the Dark Reader browser plugin */
+    html[data-darkreader-mode] {
+        background-color: initial !important;
+    }
+
+    html[data-darkreader-mode=dynamic] body {
+        background: var(--darkreader-bg--bs-orange, var(--bs-orange)) linear-gradient(var(--gradient-angle), var(--darkreader-bg--bs-orange, var(--bs-orange)), var(--darkreader-bg--bs-blue, var(--bs-blue)));
     }
 }
 

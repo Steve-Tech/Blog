@@ -4,7 +4,7 @@ title:  "JGINYUE X99-D8 Dual CPU Motherboard BIOS Features"
 ---
 I recently bought a [JGINYUE X99-D8](https://www.aliexpress.com/item/1005003601899252.html) to use with my home lab. However before I bought it I couldn't find much info about it, such as if it it supported SR-IOV or even virtualisation at all. Here's all the BIOS options that shipped with my motherboard.<!--more-->
 
-[BIOS Dump using flashrom](https://1drv.ms/u/s!AuFWgQYH32jYiIJTkjbEcU6rLZ6ACQ); [flashrom](https://www.flashrom.org/Supported_hardware) shows this chipset as untested, this rom might brick your motherboard.
+The Motherboard Drivers and BIOS are [available on jginyue.com.cn](http://jginyue.com.cn/index.php?a=show&catid=6&id=146).
 
 I've also made a custom [lm-sensors config file](https://gist.github.com/Steve-Tech/d81921919654c1fef246d65ca86df418) for this motherboard.
 
@@ -721,3 +721,8 @@ BIOS Information
 - Save as User Defaults
 - Restore User Defaults
 - Boot Override
+
+#### Additional Notes
+If you're wondering what some of those options even do, looking though the manual of a similar X99 or C600 motherboard can help.
+<br>
+For example here's the [manual for a X10DRi-T4+](https://www.supermicro.com/manuals/motherboard/C600/MNL-1560.pdf#p73).
