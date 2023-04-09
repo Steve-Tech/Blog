@@ -118,3 +118,7 @@ To install packages with `opkg`:
 Supermicro also has some [CLI documentation](https://www.supermicro.com/manuals/network/smc_switches_cli_manual.pdf) for their Aricent Switches that might be helpful.
 
 There's also some extra VLAN config in `/etc/iss_vlan.txt` that might let you tag VLAN 1, otherwise I'm sure the Aricent interface will.
+
+**Similar things I've found**
+
+* [u/RootSwitch on r/homelab had a go at "Exploring Hidden Features"](https://www.reddit.com/r/homelab/comments/p4czkr/exploring_hidden_features_of_qnap_qswm21082s/)

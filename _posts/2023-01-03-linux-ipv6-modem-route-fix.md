@@ -1,9 +1,15 @@
 ---
 layout: post
-title:  "Fix Bad IPv6 Routing from an ISP Modem on Linux"
+title:  "Remove bad IPv6 route from a bad device on Linux"
 ---
-Linux on my PC has always struggled to use IPv6 when connected to my Telstra Smart Modem (Windows was fine however), and it's always bugged me but I could never figure out why, I've tried different distros, NICs, and for some reason I never thought that my ISP would misconfigure my modem so that it would send bad routes over DHCP until now, but here I am. This was tested on Ubuntu, but should work on any distro with NetworkManager.
+
+There was a device on my network that was sending a bad IPv6 route to my Linux PC, and it was causing all sorts of issues, so while I was trying to figure out what was going on I wrote this post to help others remove the route. However I recommend using something like WireShark to find the source of the bad route, and then stopping it at the source.
+
 <!--more-->
+
+**Original Title: Fix Bad IPv6 Routing from an ISP Modem on Linux**
+
+~~Linux on my PC has always struggled to use IPv6 when connected to my Telstra Smart Modem (Windows was fine however), and it's always bugged me but I could never figure out why, I've tried different distros, NICs, and for some reason I never thought that my ISP would misconfigure my modem so that it would send bad routes over DHCP until now, but here I am. This was tested on Ubuntu, but should work on any distro with NetworkManager.~~
 
 #### Symptoms
 
