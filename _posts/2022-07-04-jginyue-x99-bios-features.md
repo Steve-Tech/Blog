@@ -724,5 +724,5 @@ BIOS Information
 
 #### Additional Notes
 If you're wondering what some of those options even do, looking though the manual of a similar X99 or C600 motherboard can help.
-<br>
+<br/>
 For example here's the [manual for a X10DRi-T4+](https://www.supermicro.com/manuals/motherboard/C600/MNL-1560.pdf#p73).
