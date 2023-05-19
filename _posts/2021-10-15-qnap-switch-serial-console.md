@@ -122,3 +122,4 @@ There's also some extra VLAN config in `/etc/iss_vlan.txt` that might let you ta
 **Similar things I've found**
 
 * [u/RootSwitch on r/homelab had a go at "Exploring Hidden Features"](https://www.reddit.com/r/homelab/comments/p4czkr/exploring_hidden_features_of_qnap_qswm21082s/)
+* [marcan/qsw-tools - Qnap QSW switch tools](https://github.com/marcan/qsw-tools), [Reddit thread](https://www.reddit.com/r/qnap/comments/13jv5nc/qswtools_full_management_cli_on_qnap_switches/)
