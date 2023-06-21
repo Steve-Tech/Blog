@@ -5,6 +5,9 @@ title:  "Things you can do with a QNAP Switch's Serial Console"
 
 I have a QNAP QSW-M408-4C and I was wondering what the serial console port was used for, especially since it wasn't documented anywhere. Well it turns out it's a full TTY terminal in LEDE Linux.<!--more--> Thanks to [u/sinisterpisces's post](https://www.reddit.com/r/qnap/comments/ofv6ge/qswm21082c_console_port_do_i_need_a_special_usb/) who inspired me to find out more about it.
 
+#### Update
+**This guide only works for older versions of the firmware, please see marcan's [qsw-tools](https://github.com/marcan/qsw-tools), for an updated guide.**
+
 #### Requirements
 * You will need a Cisco compatible RJ45 Console Port to Serial/USB adapter
 	* [Known working from Amazon](https://www.amazon.com/gp/product/B075V1RGQK/)
