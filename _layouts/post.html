@@ -52,15 +52,9 @@ layout: template
   
   <hr class="mx-2"/>
 
-  {%- include adsense-display.html -%}
-
   {%- if site.disqus.shortname -%}
   {%- include disqus_comments.html -%}
   {%- endif -%}
 
-  <p class="text-center mt-3 mb-0">
-    I'm sorry about the ads, I don't like them either.<br/>
-    If I helped you please <a href="https://www.buymeacoffee.com/stephen.horvath">buy me a croissant</a>,
-    so I can consider removing the ads.
-  </p>
+  {%- include footer.html -%}
 </article>

@@ -5,8 +5,6 @@ date: 2018-02-03T09:01:45+10:00
 ---
 I have an old slide scanner that only works with Windows 98 and I was wondering if I could use it again to scan some slides and I tried using [Oracle VM VirtualBox](https://www.virtualbox.org/) with Windows 98 to connect to it but it wouldn’t detect the scanner but then I found [VMware Workstation Player](https://www.vmware.com/products/workstation-player.html) and it worked great<!--more--> probably because it looked for the device then unmounted the device from the ‘Host’ and connected it to the ‘Guest’ and I’m going to show you how to do it yourself.
 
-{%- include adsense-inarticle.html -%}
-
 * * *
 
 #### Stuff to get beforehand

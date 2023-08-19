@@ -6,12 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="{% link /css/bootstrap-zephyr.min.css %}">
     <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css"
-        integrity="sha512-Oy+sz5W86PK0ZIkawrG0iv7XwWhYecM3exvUtMKNJMekGFJtVAhibhRPTpmyTj8+lJCkmWfnpxKgT2OopquBHA=="
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css"
+        integrity="sha512-ZnR2wlLbSbr8/c9AgLg3jQPAattCUImNsae6NHYnS9KrIwRdcY9DxFotXhNAKIKbAXlRnujIqUWoXXwqyFOeIQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Roboto&family=Source+Code+Pro&display=swap"
+    <link href="https://fonts.bunny.net/css2?family=Comfortaa&family=Roboto&family=Source+Code+Pro&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{% link /css/fruity.css %}">
     <link rel="stylesheet" type="text/css" href="{% link /css/style.css %}">
@@ -20,21 +18,15 @@
     <link rel="icon" type="image/png" href="{% link /favicons/favicon-16x16.png %}" sizes="16x16">
     {%- seo -%}
     {%- feed_meta -%}
-    {%- if jekyll.environment == 'production' and site.google_tags -%}
-    {%- include google-tags.html -%}
-    {%- include google-adsense.html -%}
+    {%- if jekyll.environment == 'production' -%}
     {%- endif -%}
 </head>
 
 <body>
-    {%- if jekyll.environment == 'production' and site.google_tags -%}
-    {%- include google-tags-noscript.html -%}
-    {%- endif -%}
-
     {{ content }}
 
     {%- if jekyll.environment == 'production' -%}
-    {%- include sovrn-commerce.html -%}
+    {%- include analytics.html -%}
     {%- endif -%}
 </body>
 

@@ -23,13 +23,10 @@ layout: template
   {% assign divisible = forloop.index | modulo: 3 %}
   {% if divisible == 0 %}
   <li>
-    {%- include adsense-infeed.html -%}
   </li>
   {%- endif -%}
   {%- endfor -%}
 </ul>
 <hr/>
 <p class="rss-subscribe text-center mb-0">Subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
-
-{%- include adsense-display.html -%}
 {%- endif -%}
