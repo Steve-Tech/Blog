@@ -3,39 +3,39 @@ layout: template
 ---
 <article class="h-entry mx-2" itemscope itemtype="http://schema.org/BlogPosting">
 
-  <header>
-    <a class="u-url d-none" href="{{ page.url | relative_url }}" hidden></a>
-    <h3 class="p-name" itemprop="name headline">{{ page.title | escape }}</h3>
-  </header>
+    <header>
+        <a class="u-url d-none" href="{{ page.url | relative_url }}" hidden></a>
+        <h3 class="p-name" itemprop="name headline">{{ page.title | escape }}</h3>
+    </header>
 
-  <div class="e-content" itemprop="articleBody">
-    {{ content }}
+    <div class="e-content" itemprop="articleBody">
+        {{ content }}
 
-    {%- if page.signoff != false -%}
-    <p id="signoff">
-        <span>{{ page.signoff_message | default: "Thanks for reading!" }}</span>
-        <br/>
-        <i class="comfortaa">
-            {%- if page.author -%}
-            {%- if site.data.authors contains page.author -%}
-            {% assign author = site.data.authors[page.author] %}
-            {{ author.signoff }}
-            {%- else -%}
-            {{ page.author }}
-            {%- endif -%}
-            {%- else -%}
-            Steve
-            {%- endif -%}.
-        </i>
-    </p>
+        {%- if page.signoff != false -%}
+        <p id="signoff">
+            <span>{{ page.signoff_message | default: "Thanks for reading!" }}</span>
+            <br />
+            <i class="comfortaa">
+                {%- if page.author -%}
+                {%- if site.data.authors contains page.author -%}
+                {% assign author = site.data.authors[page.author] %}
+                {{ author.signoff }}
+                {%- else -%}
+                {{ page.author }}
+                {%- endif -%}
+                {%- else -%}
+                Steve
+                {%- endif -%}.
+            </i>
+        </p>
+        {%- endif -%}
+    </div>
+
+    <hr class="mx-2" />
+
+    {%- if site.disqus.shortname -%}
+    {%- include disqus_comments.html -%}
     {%- endif -%}
-  </div>
-  
-  <hr class="mx-2"/>
 
-  {%- if site.disqus.shortname -%}
-  {%- include disqus_comments.html -%}
-  {%- endif -%}
-
-  {%- include footer.html -%}
+    {%- include footer.html -%}
 </article>

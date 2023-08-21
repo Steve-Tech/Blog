@@ -3,58 +3,58 @@ layout: template
 ---
 <article class="h-entry mx-2" itemscope itemtype="http://schema.org/BlogPosting">
 
-  <header>
-    <a class="u-url d-none" href="{{ page.url | relative_url }}" hidden></a>
-    <div class="small text-muted">
-      <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-        {{ page.date | date: site.date_format }}
-      </time>
-      {%- if page.author -%}
-      {%- if site.data.authors contains page.author -%}
-      {% assign author = site.data.authors[page.author] %}
-      &bull; <a href="{{ author.github | default: author.url }}">
-        <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <span class="p-author h-card" itemprop="name">{{ page.author }}</span>
-        </span>
-      </a>
-      {%- else -%}
-      &bull; <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-        <span class="p-author h-card" itemprop="name">{{ page.author }}</span>
-      </span>
-      {%- endif -%}
-      {%- endif -%}
-    </div>
-    <h3 class="p-name" itemprop="name headline">{{ page.title | escape }}</h3>
-  </header>
-
-  <div class="e-content" itemprop="articleBody">
-    {{ content }}
-
-    {%- if page.signoff != false -%}
-    <p id="signoff">
-        <span>{{ page.signoff_message | default: "Thanks for reading!" }}</span>
-        <br/>
-        <i class="comfortaa">
+    <header>
+        <a class="u-url d-none" href="{{ page.url | relative_url }}" hidden></a>
+        <div class="small text-muted">
+            <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+                {{ page.date | date: site.date_format }}
+            </time>
             {%- if page.author -%}
             {%- if site.data.authors contains page.author -%}
             {% assign author = site.data.authors[page.author] %}
-            {{ author.signoff }}
+            &bull; <a href="{{ author.github | default: author.url }}">
+                <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+                    <span class="p-author h-card" itemprop="name">{{ page.author }}</span>
+                </span>
+            </a>
             {%- else -%}
-            {{ page.author }}
+            &bull; <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <span class="p-author h-card" itemprop="name">{{ page.author }}</span>
+            </span>
             {%- endif -%}
-            {%- else -%}
-            Steve
-            {%- endif -%}.
-        </i>
-    </p>
+            {%- endif -%}
+        </div>
+        <h3 class="p-name" itemprop="name headline">{{ page.title | escape }}</h3>
+    </header>
+
+    <div class="e-content" itemprop="articleBody">
+        {{ content }}
+
+        {%- if page.signoff != false -%}
+        <p id="signoff">
+            <span>{{ page.signoff_message | default: "Thanks for reading!" }}</span>
+            <br />
+            <i class="comfortaa">
+                {%- if page.author -%}
+                {%- if site.data.authors contains page.author -%}
+                {% assign author = site.data.authors[page.author] %}
+                {{ author.signoff }}
+                {%- else -%}
+                {{ page.author }}
+                {%- endif -%}
+                {%- else -%}
+                Steve
+                {%- endif -%}.
+            </i>
+        </p>
+        {%- endif -%}
+    </div>
+
+    <hr class="mx-2" />
+
+    {%- if site.disqus.shortname -%}
+    {%- include disqus_comments.html -%}
     {%- endif -%}
-  </div>
-  
-  <hr class="mx-2"/>
 
-  {%- if site.disqus.shortname -%}
-  {%- include disqus_comments.html -%}
-  {%- endif -%}
-
-  {%- include footer.html -%}
+    {%- include footer.html -%}
 </article>
