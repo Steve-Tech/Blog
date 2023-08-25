@@ -18,16 +18,10 @@
     <link rel="icon" type="image/png" href="{% link /favicons/favicon-16x16.png %}" sizes="16x16">
     {%- seo -%}
     {%- feed_meta -%}
-    {%- if jekyll.environment == 'production' -%}
-    {%- endif -%}
 </head>
 
 <body>
     {{ content }}
-
-    {%- if jekyll.environment == 'production' -%}
-    {%- include analytics.html -%}
-    {%- endif -%}
 </body>
 
 </html>
