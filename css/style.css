@@ -109,7 +109,7 @@ img {
         color: var(--bs-gray-500) !important;
     }
 
-    .bg-white {
+    .bg-white, .bg-white .table > :not(caption) > * > * {
         background-color: var(--bs-dark) !important;
     }
 
