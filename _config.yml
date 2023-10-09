@@ -55,6 +55,7 @@ excerpt_separator: <!--more-->
 highlighter: rouge
 
 include:
+  - _headers
   - _redirects
 
 # If you want to link only specific pages in your header, uncomment

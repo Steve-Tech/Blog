@@ -4,6 +4,7 @@ title:  "Using an SR-IOV Network Interface in a Proxmox LXC"
 ---
 
 For fun I was trying to work out how I could use an SR-IOV Interface for my LanCache container. Since it would let me run it with very low disk overhead, compared to a VM, and low network overhead compared to a virtual bridge; I am aware that this probably doesn't affect much though.<!--more-->
+Also, after running an iperf, it still isn't as fast as on the host, or a VM with PCIe passthrough, but it's seems slightly faster than a virtual bridge.
 
 Firstly you need to have SR-IOV enabled and working, and also have the VF's showing up on the host, eg. interfaces similar to `ens6f0v2` showing up in `ip a`.
 
