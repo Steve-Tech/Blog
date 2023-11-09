@@ -51,7 +51,8 @@ h6,
 .h4,
 .h5,
 .h6,
-.table {
+.table,
+.table > :not(caption) > * > * {
     color: var(--bs-body-color);
 }
 
