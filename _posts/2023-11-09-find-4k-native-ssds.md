@@ -5,7 +5,7 @@ title:  "Find 4K Native Supported SSDs"
 
 I was recently looking for a 4Kn supported SSD for my laptop, I know it doesn't really improve performance by a noticeable amount, I was more just looking for power efficiency, which also hasn't really been benchmarked. So... uhh... higher number better right?<!--more-->
 
-#### Using the [Linux Hardware Database](https://linux-hardware.org)
+#### Using the [Linux Hardware Database](https://linux-hardware.org/?view=search&typeid=disk&busid=nvme)
 
 - I have found the most luck by entering the model name (not model number) of the SSD, eg. "SN850" for a "Western Digital 1TB Black SN850", and leaving the rest blank.
 - Choose whatever result looks most like your SSD, and click on it.
@@ -31,7 +31,8 @@ This was quickly thrown together, so it will not be detailed, complete, accurate
 |Drive|Max LBA|Default LBA|
 |---|---|---|
 |Western Digital 1TB Black|4096|512|
-|Corsair MP600 CORE XT|4096|512|
+|Corsair MP600 CORE XT 1TB|4096|512|
+|Crucial T700 1TB|4096|512|
 |Samsung 1TB 990 Pro|512|512|
 |Kingston KC3000 1TB|512|512|
 |Crucial P5 Plus 1TB|512|512|
