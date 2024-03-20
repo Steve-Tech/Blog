@@ -93,3 +93,10 @@ I was trying to update MongoDB from 3.6 to 4.4 since the Unifi network app suppo
     ```sh
     chown -R unifi:unifi /usr/lib/unifi/data/db
     ```
+
+#### Newer Versions
+
+This guide should still work for newer versions of MongoDB, although there are a few exceptions:
+
+- Versions 5.0 and newer no longer have major sub-versions, so you can skip some iteration steps e.g. only 4.4 -> 5.0 -> 6.0 -> 7.0 is required.
+- Versions 7.0 and newer have added an additional `confirm` field to the set version command, so you will need to run `db.adminCommand( { setFeatureCompatibilityVersion: "7.0", confirm: true } )` instead.
