@@ -1,4 +1,11 @@
-<p class="text-center mt-3 mb-0">
-    This site doesn't use any Google services, <a href="/privacy">read more here</a>.<br/>
-    If I helped you please <a href="https://www.buymeacoffee.com/stephen.horvath">buy me a croissant</a> or <a href="https://github.com/sponsors/Steve-Tech">sponsor me on GitHub</a>.
-</p>
+<div class="text-center">
+    {%- if site.sponsors.size > 0 %}
+    <p class="mb-0" id="sponsors">Thank you to my sponsors:
+        {%- for sponsor in site.sponsors %}
+        <a href="https://github.com/{{ sponsor }}">{{ sponsor }}</a>{% unless forloop.last %},{% endunless %}
+        {%- endfor -%}
+    </p>
+    {% endif -%}
+    <p class="mb-0">If I helped you please <a href="https://github.com/sponsors/Steve-Tech">sponsor me on GitHub</a>!</p>
+    <p class="mb-0">This site doesn't use any Google services or advertising, <a href="/privacy">read more here</a>.</p>
+</div>
