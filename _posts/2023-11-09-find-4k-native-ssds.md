@@ -33,6 +33,7 @@ This was quickly thrown together, so it will not be detailed, complete, accurate
 |Western Digital 1TB Black|4096|512|
 |Corsair MP600 CORE XT 1TB|4096|512|
 |Crucial T700 1TB|4096|512|
+|Kingston FURY Renegade 2TB|4096|512|
 |Samsung 1TB 990 Pro|512|512|
 |Kingston KC3000 1TB|512|512|
 |Crucial P5 Plus 1TB|512|512|

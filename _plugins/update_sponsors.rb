@@ -8,10 +8,12 @@ module Jekyll
             puts "Fetching sponsors..."
             res = Net::HTTP.post(URI.parse("https://api.github.com/graphql"), QUERY.to_json, {"Authorization" => "bearer " + ENV["GITHUB_TOKEN"], "Content-Type" => "application/json"})
             data = JSON.parse(res.body)
-            raw_sponsors = data["data"]["viewer"]["sponsors"]["nodes"]
+            raw_sponsors = data.dig("data", "viewer", "sponsors", "nodes")
             sponsors = []
-            raw_sponsors.each do |sponsor|
-                sponsors.push(sponsor["login"])
+            if raw_sponsors
+              raw_sponsors.each do |sponsor|
+                  sponsors.push(sponsor["login"])
+              end
             end
             site.config["sponsors"] = sponsors
             puts sponsors
