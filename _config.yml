@@ -44,11 +44,10 @@ instagram_username: stevetech_
 
 show_excerpts: true # set to true to show excerpts on the homepage
 
-disqus:
-  shortname: jas-tech
-
-google_analytics: UA-99913981-1
-google_tags: GTM-NKSH457
+turnstile_site_key: 0x4AAAAAABnOMB3gGeCDbW-U
+#google_fonts: https://fonts.bunny.net
+# Cloudflare will de-Google the fonts
+google_fonts: https://fonts.googleapis.com
 
 excerpt_separator: <!--more-->
 

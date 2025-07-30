@@ -12,13 +12,16 @@
     }
 }
 
+:root {
+    --bs-font-sans-serif: 'Roboto', sans-serif;
+}
+
 html {
     /* Make the page / gradient the full height on big screens */
     min-height: 100vh;
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
     background: var(--bs-orange) linear-gradient(var(--gradient-angle), var(--bs-orange), var(--bs-blue));
     animation: gradient-spin 60s linear infinite;
 }

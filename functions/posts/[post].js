@@ -106,6 +106,32 @@ export async function onRequestPost(context) {
         const formData = await context.request.formData();
         const url = new URL(context.request.url);
         const key = url.pathname;
+        // Turnstile injects a token in "cf-turnstile-response".
+        const token = formData.get("cf-turnstile-response");
+        const ip = context.request.headers.get("CF-Connecting-IP");
+
+        // Validate the token by calling the
+        // "/siteverify" API endpoint.
+        let turnstileData = new FormData();
+        turnstileData.append("secret", context.env.TURNSTILE_SECRET_KEY);
+        turnstileData.append("response", token);
+        turnstileData.append("remoteip", ip);
+
+        const turnstileUrl = "https://challenges.cloudflare.com/turnstile/v0/siteverify";
+        const result = await fetch(turnstileUrl, {
+            body: turnstileData,
+            method: "POST",
+        });
+
+        const outcome = await result.json();
+        if (!outcome.success) {
+            return new Response(
+                "Turnstile verification failed.\n" +
+                "Sorry I haven't implemented a proper error page yet, press back and try again.\n" +
+                "If you can't pass Turnstile for technical or privacy reasons, please email me and I'll manually add your comment.",
+                {status: 400}
+            );
+        }
 
         const body = {};
         for (const entry of formData.entries()) {
