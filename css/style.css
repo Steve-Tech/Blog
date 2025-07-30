@@ -56,6 +56,22 @@ h6,
     color: var(--bs-body-color);
 }
 
+.card {
+    --bs-card-bg: var(--bs-light);
+    --bs-card-cap-padding-y: 0.5rem;
+    --bs-card-cap-padding-x: 1rem;
+    border: 0;
+}
+
+.card-title .comment-date {
+    font-size: 0.8rem;
+    color: var(--bs-secondary-color);
+}
+
+a.card-link {
+    text-decoration: none;
+}
+
 a {
     transition: color 0.25s;
     color: var(--bs-primary);
@@ -104,9 +120,12 @@ img {
 @media only screen and (prefers-color-scheme: dark) {
     :root {
         color-scheme: dark;
+        --bs-body-color: var(--bs-gray-200);
+        --bs-border-color: #495057;
+        --bs-border-color-translucent: rgba(255, 255, 255, 0.15);
     }
 
-    .text-muted {
+    .text-muted, .card-title .comment-date {
         color: var(--bs-gray-500) !important;
     }
 
@@ -116,10 +135,6 @@ img {
 
     .bg-light {
         background-color: var(--bs-gray-dark) !important;
-    }
-
-    :root {
-        --bs-body-color: var(--bs-gray-200)
     }
 
     a {

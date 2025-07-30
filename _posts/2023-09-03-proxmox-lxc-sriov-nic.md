@@ -10,7 +10,7 @@ Firstly you need to have SR-IOV enabled and working, and also have the VF's show
 
 Since as you may have noticed, proxmox doesn't support this in the UI so you're going to have to add these to the LXC's config (`nano /etc/pve/lxc/<ct-id>.conf`).
 
-```r
+```conf
 lxc.net.0.type: phys
 lxc.net.0.link: ens6f0v32  # Replace with your VF interface
 lxc.net.0.flags: up

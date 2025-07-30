@@ -1,0 +1,54 @@
+{%- if page.comments != false and jekyll.environment != "production" -%}
+<div id="comments">
+    <h4>Comments</h4>
+    <div class="alert alert-danger" role="alert">
+        <strong>Temporarily Unavailable!</strong> An error occurred generating the comments. <i>Sorry!</i>
+    </div>
+    <div class="card bg-light mb-2 d-none" data-comment-id="-1">
+        <div class="card-body">
+            <h5 class="card-title">
+                <span class="fst-italic text-decoration-underline"></span>
+                <span class="comment-date ms-2 fw-bold"></span>
+            </h5>
+            <p class="card-text"></p>
+            <a href="javascript:;" class="card-link">Reply</a>
+        </div>
+    </div>
+</div>
+<noscript>
+    <div class="alert alert-danger" role="alert">
+        <strong>JavaScript is disabled!</strong> In an attempt to reduce spam, JavaScript is required to post comments. <i>Sorry!</i>
+    </div>
+</noscript>
+<button class="btn btn-primary mt-1 d-none" id="new-comment-btn">Leave a comment</button>
+<div id="new-comment-form" class="d-none">
+    <div class="card bg-light">
+        <form class="card-body" method="post">
+            <div class="row align-items-center">
+                <div class="col-1">
+                    <label for="name" class="col-form-label">Name: </label>
+                </div>
+                <div class="col-auto">
+                    <input type="text" id="name" name="name" class="form-control bg-white" placeholder="Steve" required maxlength="32">
+                </div>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-1">
+                    <label for="email" class="col-form-label">Email: </label>
+                </div>
+                <div class="col-auto">
+                    <input type="email" id="email" name="email" class="form-control bg-white" placeholder="steve@example.com" aria-describedby="email-text">
+                </div>
+                <div class="col-auto">
+                <span id="email-text" class="form-text text-muted">
+                    (Optional, and will not be displayed or shared)
+                </span>
+                </div>          
+            </div>
+            <textarea name="text" class="form-control bg-white mt-3" rows="3" placeholder="Leave a comment..." required></textarea>
+            <button type="submit" class="btn btn-primary mt-3">Submit Comment</button>
+        </form>
+    </div>
+</div>
+<script async src="{% link /js/comments.js %}"></script>
+{%- endif -%}
