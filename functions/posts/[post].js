@@ -1,3 +1,18 @@
+class AlertWriter {
+    constructor(message) {
+        this.message = message;
+    }
+    element(element) {
+        element.setInnerContent(this.message, {html: true});
+    }
+}
+
+class RemoveWriter {
+    element(element) {
+        element.remove();
+    }
+}
+
 class CommentWriter {
     constructor(comments) {
         this.post_comments = comments;
@@ -102,18 +117,25 @@ export async function onRequestGet(context) {
 }
 
 export async function onRequestPost(context) {
-    if (context.request.headers.get('content-type')?.includes('form')) {
-        const formData = await context.request.formData();
-        const url = new URL(context.request.url);
+    const { request, env } = context;
+    if (request.headers.get('content-type')?.includes('form')) {
+        const url = new URL(request.url);
+        const assetResponse = await env.ASSETS.fetch(url);
+
+        if (!assetResponse.ok) {
+            return context.next();
+        }
+
+        const formData = await request.formData();
         const key = url.pathname;
         // Turnstile injects a token in "cf-turnstile-response".
         const token = formData.get("cf-turnstile-response");
-        const ip = context.request.headers.get("CF-Connecting-IP");
+        const ip = request.headers.get("CF-Connecting-IP");
 
         // Validate the token by calling the
         // "/siteverify" API endpoint.
         let turnstileData = new FormData();
-        turnstileData.append("secret", context.env.TURNSTILE_SECRET_KEY);
+        turnstileData.append("secret", env.TURNSTILE_SECRET_KEY);
         turnstileData.append("response", token);
         turnstileData.append("remoteip", ip);
 
@@ -125,12 +147,21 @@ export async function onRequestPost(context) {
 
         const outcome = await result.json();
         if (!outcome.success) {
-            return new Response(
-                "Turnstile verification failed.\n" +
-                "Sorry I haven't implemented a proper error page yet, press back and try again.\n" +
-                "If you can't pass Turnstile for technical or privacy reasons, please email me and I'll manually add your comment.",
-                {status: 400}
-            );
+            const newResponse = await new HTMLRewriter()
+                .on('div#comments>div[role="alert"]',
+                    new AlertWriter(
+                        "<strong>Turnstile verification failed.</strong> Please go back and try again.<br>" + 
+                        "If you can't pass Turnstile for technical or privacy reasons, please email me and I'll manually add your comment."
+                    ))
+                .on('#new-comment-btn', new RemoveWriter())
+                .on('#new-comment-form', new RemoveWriter())
+                .on('script[data-id="comments.js"]', new RemoveWriter())
+                .transform(assetResponse);
+            
+            return new Response(await newResponse.text(), {
+                status: 400,
+                headers: newResponse.headers,
+            });
         }
 
         const body = {};
@@ -138,7 +169,7 @@ export async function onRequestPost(context) {
             body[entry[0]] = entry[1];
         }
 
-        let comments = (await context.env.BLOG_COMMENTS.get(key, {type: 'json'})) ?? [];
+        let comments = (await env.BLOG_COMMENTS.get(key, {type: 'json'})) ?? [];
 
         for (const entry of formData.entries()) {
             console.log(`${entry[0]}: ${entry[1]}`);
@@ -165,10 +196,11 @@ export async function onRequestPost(context) {
             text: escapeString(body['text']),
             parent: parent,
             date: new Date().toISOString(),
-            isMe: body['email'] === context.env.ME_KEY || undefined,
+            ip: ip,
+            isMe: body['email'] === env.ME_KEY || undefined,
         }
 
-        await context.env.BLOG_COMMENTS.put(key, JSON.stringify([...comments, newComment]));
+        await env.BLOG_COMMENTS.put(key, JSON.stringify([...comments, newComment]));
 
 	    return new Response(null, {status: 303, headers: {'Location': key}
         });

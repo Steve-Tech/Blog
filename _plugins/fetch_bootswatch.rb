@@ -17,8 +17,12 @@ module Jekyll
         bs_path = "./css/bootstrap-" + bs_name + ".min.css"
         puts bs_url
         Down.download(bs_url, destination: bs_path)
-
         puts "Downloaded Bootswatch to " + bs_path
+
+        css = File.read(bs_path, encoding: "UTF-8")
+        css = css.gsub(/@import url\([^)]+\);/, "")
+        File.write(bs_path, css, encoding: "UTF-8")
+        puts "Removed @import line from " + bs_path
     end
 
 end
