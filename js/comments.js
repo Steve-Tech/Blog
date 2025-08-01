@@ -18,6 +18,10 @@ function addComment(reply = null) {
         comment_form.querySelector("button[type=submit]").innerText = "Create New Comment";
         btn_new_comment.after(comment_form);
     }
+    comment_form.querySelector(".cf-turnstile>div")?.remove();
+    turnstile.render(comment_form.querySelector(".cf-turnstile"), {
+        sitekey: comment_form.querySelector(".cf-turnstile").dataset.sitekey,
+    });
     comment_form.classList.remove("d-none");
 }
 

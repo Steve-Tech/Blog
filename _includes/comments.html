@@ -21,7 +21,6 @@
     </div>
 </noscript>
 <button class="btn btn-primary mt-1 d-none" id="new-comment-btn">Leave a comment</button>
-<div class="cf-turnstile" data-sitekey="{{ site.turnstile_site_key }}"></div>
 <div id="new-comment-form" class="d-none">
     <div class="card bg-light">
         <form class="card-body" method="post">
@@ -44,10 +43,11 @@
                 <span id="email-text" class="form-text text-muted">
                     (Optional, and will not be displayed or shared)
                 </span>
-                </div>          
+                </div>
             </div>
-            <textarea name="text" class="form-control bg-white mt-3" rows="3" placeholder="Leave a comment..." required></textarea>
-            <button type="submit" class="btn btn-primary mt-3">Submit Comment</button>
+            <textarea name="text" class="form-control bg-white mt-3 mb-2" rows="3" placeholder="Leave a comment..." required></textarea>
+            <div class="cf-turnstile" data-sitekey="{{ site.turnstile_site_key }}"></div>
+            <button type="submit" class="btn btn-primary mt-2">Submit Comment</button>
         </form>
     </div>
 </div>
