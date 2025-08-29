@@ -104,20 +104,26 @@ Using a kernel module is the most efficient way to read the tachometer signal, a
     PPR=2  # Pulses per revolution (usually 2)
 
     while true; do
-    timestamp1=$SECONDS
-    count1=$(<"$SYSFS")
-    # Wait for STDIN
-    read -r
-    interval=$(($SECONDS-$timestamp1))
-    count2=$(<"$SYSFS")
-    delta=$((count2 - count1))
-    # counter wrapped around
-    if [ "$delta" -lt 0 ]; then
+      timestamp1=$(date +%s%3N)
+      count1=$(<"$SYSFS")
+      read -r
+      timestamp2=$(date +%s%3N)
+      interval_ms=$((timestamp2 - timestamp1))
+      count2=$(<"$SYSFS")
+      delta=$((count2 - count1))
+      # counter wrapped around
+      if [ "$delta" -lt 0 ]; then
         delta=0
         continue
-    fi
-    rpm=$(( delta * (60/($interval*$PPR)) ))
-    echo "rack_fan,location=upstairs rpm=$rpm"
+      fi
+      # RPM = delta * 60000 / (interval_ms * PPR)
+      if [ "$interval_ms" -gt 0 ]; then
+        rpm=$(( delta * 60000 / (interval_ms * PPR) ))
+      else
+        rpm=0
+      fi
+
+      echo "rack_fan,location=upstairs rpm=$rpm"
     done
     ```
 
@@ -189,6 +195,44 @@ ExecStart=/opt/fan_control.sh
 
 [Install]
 WantedBy=multi-user.target
+```
+
+You can also add the duty cycle percent to telegraf script that I created at `/opt/count_fan_speed.sh`:
+
+```sh
+#!/usr/bin/env bash
+SYSFS="/sys/kernel/gpio-counter/pulse_count"
+PPR=2  # Pulses per revolution (usually 2)
+
+SYSFS_PERIOD="/sys/class/pwm/pwmchip0/pwm2/period"
+SYSFS_DUTY="/sys/class/pwm/pwmchip0/pwm2/duty_cycle"
+
+while true; do
+  timestamp1=$(date +%s%3N)
+  count1=$(<"$SYSFS")
+  read -r
+  timestamp2=$(date +%s%3N)
+  interval_ms=$((timestamp2 - timestamp1))
+  count2=$(<"$SYSFS")
+  delta=$((count2 - count1))
+  # counter wrapped around
+  if [ "$delta" -lt 0 ]; then
+    delta=0
+    continue
+  fi
+  # RPM = delta * 60000 / (interval_ms * PPR)
+  if [ "$interval_ms" -gt 0 ]; then
+    rpm=$(( delta * 60000 / (interval_ms * PPR) ))
+  else
+    rpm=0
+  fi
+
+  period=$(<"$SYSFS_PERIOD")
+  duty=$(<"$SYSFS_DUTY")
+  percent=$(( duty*100 / period ))
+
+  echo "rack_fan,location=upstairs rpm=$rpm,duty=$percent"
+done
 ```
 
 #### Other Resources
