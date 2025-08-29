@@ -142,6 +142,7 @@ You can use [`check_clocks.c`](https://github.com/Avnu/tsn-doc/blob/master/misc/
     ```
 
 - Hardware timestamping is broken on kernels 6.12.25 to 6.12.35, you will need to upgrade your kernel or use software timestamping instead. As of writing Raspberry Pi OS is on 6.12.34 (issue: [raspberrypi/linux#6912](https://github.com/raspberrypi/linux/issues/6912)), but you can run `sudo rpi-update` to upgrade to Raspberry Pi's latest pre-release kernel.
+- If your machine has network bridges configured on the PTP interface (e.g. Proxmox), you will likely need to use `network_transport L2` in `ptp4l.conf` instead of the default `UDPv4` (This has to be set on all PTP devices).
 
 #### Networking Equipment
 
