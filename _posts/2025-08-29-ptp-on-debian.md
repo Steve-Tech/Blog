@@ -131,16 +131,13 @@ You can use [`check_clocks.c`](https://github.com/Avnu/tsn-doc/blob/master/misc/
 
 #### Troubleshooting
 
-
-- If you get `phc2sys: interface enp12s0f0 does not have a PHC` on boot up, but phc2sys otherwise works fine, you can edit the service (e.g `sudo systemctl edit phc2sys@enp12s0f0.service`) and add the following lines to wait for `/dev/ptp0`:
+- If you get `phc2sys: interface enp12s0f0 does not have a PHC` on boot up, but phc2sys otherwise works fine, you can edit the service (e.g `sudo systemctl edit phc2sys@enp12s0f0.service`) and add the following lines to retry starting:
 
     ```ini
-    [Unit]
-    Requires=dev-ptp0.device
-    After=dev-ptp0.device
+    [Service]
+    Restart=on-failure
+    RestartSec=5
     ```
-
-    If you have multiple ptp devices, you can find the correct device by running `ls /sys/class/net/enp12s0f0/device/ptp` (replacing `enp12s0f0` with your interface), then you can use `dev-ptp1.device` or similar instead. `network-online.target` may also work, but I haven't tried it.
 
 - If you are using this on a desktop and get `clockcheck: clock frequency changed unexpectedly!` after resuming from sleep, you can disable the clockcheck by adding `sanity_freq_limit 0` to `/etc/ptp4l.conf`, and editing the `ExecStart=` line in `phc2sys@.service` to include the `-L 0` option:
 
