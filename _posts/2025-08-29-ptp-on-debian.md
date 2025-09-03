@@ -101,7 +101,7 @@ You can use [`check_clocks.c`](https://github.com/Avnu/tsn-doc/blob/master/misc/
     chronyc sources -v
     ```
 
-    If you have a GUI you can also use [My_Time](https://mytime.stevetech.au/) or [time.is](https://time.is/) to check the time is actually correct.
+    If you have a GUI you can also use [My_Time](https://mytime.stevetech.au/) or [time.is](https://time.is/) to check the time is actually correct; or use `telnet time-a-b.nist.gov 13 && date` for CLI ([NIST RFC-867 format](https://www.nist.gov/pml/time-and-frequency-division/time-distribution/internet-time-service-its)), but this won't be as accurate.
 
 #### Client Configuration (Without Chrony/Timemaster)
 
@@ -109,7 +109,7 @@ You can use [`check_clocks.c`](https://github.com/Avnu/tsn-doc/blob/master/misc/
 
     - `clientOnly` or `slaveOnly`: Set this to `1` to disable the NIC from becoming a master.
     - `domainNumber`: Set this to the same value on all PTP devices, default is `0`.
-    - `network_transport`: Select between `L2` (Layer 2), `UDPv4`, or `UDPv6`, default is `UDPv4`. This must be the same on all PTP devices. Devices with network bridges may require `L2` (e.g. Proxmox).
+    - `network_transport`: Select between `L2` (Layer 2), `UDPv4`, or `UDPv6`, default is `UDPv4`. This must be the same on all PTP devices. Devices with network bridges (e.g. Proxmox) may require `L2`.
     - `time_stamping`: Set this to `hardware` if your NIC supports hardware timestamping, otherwise set it to `software`.
 
 2. Edit or copy `/lib/systemd/system/phc2sys@.service`:
@@ -120,6 +120,8 @@ You can use [`check_clocks.c`](https://github.com/Avnu/tsn-doc/blob/master/misc/
         Requires=ptp4l@.service
         After=ptp4l@.service
         ```
+
+        Just noticed while writing, there's an open [PR](https://salsa.debian.org/multimedia-team/linuxptp/-/merge_requests/3) to fix this in the debian package.
 
 3. Enable and start the `ptp4l` and `phc2sys` services:
 
@@ -150,6 +152,7 @@ You can use [`check_clocks.c`](https://github.com/Avnu/tsn-doc/blob/master/misc/
 - On Raspberry Pi 5s you may need to set `hwts_filter full` in `ptp4l.conf` for hardware timestamping to work correctly.
 - Hardware timestamping is broken on kernels 6.12.25 to 6.12.35, you will need to upgrade your kernel or use software timestamping instead. As of writing, Raspberry Pi OS is on 6.12.34 (issue: [raspberrypi/linux#6912](https://github.com/raspberrypi/linux/issues/6912)), but you can run `sudo rpi-update` to upgrade to Raspberry Pi's latest pre-release kernel.
 - If your machine has network bridges configured on the PTP interface (e.g. Proxmox), you will likely need to use `network_transport L2` in `ptp4l.conf` instead of the default `UDPv4` (This has to be set on all PTP devices).
+- Stuttery Audio can be caused by incorrectly synced clocks, check the ptp4l and phc2sys services are running (e.g. `sudo systemctl status phc2sys@enp12s0f0.service ptp4l@enp12s0f0.service`), and that the system clock is correct (using [My_Time](https://mytime.stevetech.au/), [time.is](https://time.is/), or `telnet time-a-b.nist.gov 13`).
 
 #### Networking Equipment
 
