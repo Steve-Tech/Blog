@@ -45,10 +45,10 @@ There's a wonderful guide on [Austin's Nerdy Things](https://austinsnerdythings.
     - Change the `ExecStart=` line to:
 
         ```ini
-        ExecStart=/usr/sbin/phc2sys -s CLOCK_REALTIME -c %I -O 37
+        ExecStart=/usr/sbin/phc2sys -s CLOCK_REALTIME -c %I -w
         ```
 
-        This will sync the system clock to the PTP Hardware Clock (PHC). I was also required to specify the TIA offset of 37 seconds, this will need updating every leap second.
+        This will sync the system clock to the PTP Hardware Clock (PHC). `-w` will wait for ptp4l to start, and will sync the TAI/UTC offsets with ptp4l. You can manually set offsets with `-O <offset>`, but I find it's best to do this automatically.
 
 3. Enable and start the `ptp4l` and `phc2sys` services:
 
@@ -107,7 +107,7 @@ You can use [`check_clocks.c`](https://github.com/Avnu/tsn-doc/blob/master/misc/
 
 1. Edit `/etc/linuxptp/ptp4l.conf` and edit the following options:
 
-    - `clientOnly` or `slaveOnly`: Set this to `1` to disable the NIC from becoming a master.
+    - `clientOnly` or `slaveOnly`: Set this to `1` to disable the NIC from becoming a master. (Or `gmCapable 0` to disable the master clock entirely)
     - `domainNumber`: Set this to the same value on all PTP devices, default is `0`.
     - `network_transport`: Select between `L2` (Layer 2), `UDPv4`, or `UDPv6`, default is `UDPv4`. This must be the same on all PTP devices. Devices with network bridges (e.g. Proxmox) may require `L2`.
     - `time_stamping`: Set this to `hardware` if your NIC supports hardware timestamping, otherwise set it to `software`.
@@ -138,13 +138,13 @@ You can use [`check_clocks.c`](https://github.com/Avnu/tsn-doc/blob/master/misc/
     ```ini
     [Service]
     Restart=on-failure
-    RestartSec=5
+    RestartSec=3
     ```
 
-- If you are using this on a desktop and get `clockcheck: clock frequency changed unexpectedly!` after resuming from sleep, you can disable the clockcheck by adding `sanity_freq_limit 0` to `/etc/ptp4l.conf`, and editing the `ExecStart=` line in `phc2sys@.service` to include the `-L 0` option:
+- If you are using this on a desktop and get `clockcheck: clock frequency changed unexpectedly!` after resuming from sleep, you can disable the clockcheck by adding `sanity_freq_limit 0` to `/etc/ptp4l.conf`, and editing the `ExecStart=` line in `phc2sys@.service` to include the `-L 0` & `-S 1` options:
 
     ```ini
-    ExecStart=/usr/sbin/phc2sys -w -s %I -L 0
+    ExecStart=/usr/sbin/phc2sys -w -s %I -L 0 -S 1
     ```
 
     If you are using `systemctl edit` to override the service, add an extra `ExecStart=` line before this to clear the previous one.
