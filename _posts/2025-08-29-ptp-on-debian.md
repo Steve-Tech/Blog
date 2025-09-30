@@ -41,7 +41,6 @@ There's a wonderful guide on [Austin's Nerdy Things](https://austinsnerdythings.
 
 2. Edit or copy `/lib/systemd/system/phc2sys@.service`:
 
-    - Remove/comment out the `Requires=` and `After=` lines, as `ptp4l` will depend on `phc2sys` for time instead of the other way around.
     - Change the `ExecStart=` line to:
 
         ```ini
@@ -138,13 +137,13 @@ You can use [`check_clocks.c`](https://github.com/Avnu/tsn-doc/blob/master/misc/
     ```ini
     [Service]
     Restart=on-failure
-    RestartSec=3
+    RestartSec=5
     ```
 
-- If you are using this on a desktop and get `clockcheck: clock frequency changed unexpectedly!` after resuming from sleep, you can disable the clockcheck by adding `sanity_freq_limit 0` to `/etc/ptp4l.conf`, and editing the `ExecStart=` line in `phc2sys@.service` to include the `-L 0` & `-S 1` options:
+- If you are using this on a desktop and get `clockcheck: clock frequency changed unexpectedly!` after resuming from sleep, you can make ptp4l step the clock by adding `step_threshold 1.0` to `/etc/ptp4l.conf`, and editing the `ExecStart=` line in `phc2sys@.service` to include the `-S 1` option:
 
     ```ini
-    ExecStart=/usr/sbin/phc2sys -w -s %I -L 0 -S 1
+    ExecStart=/usr/sbin/phc2sys -w -s %I -S 1
     ```
 
     If you are using `systemctl edit` to override the service, add an extra `ExecStart=` line before this to clear the previous one.

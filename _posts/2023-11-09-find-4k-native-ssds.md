@@ -16,13 +16,13 @@ I was recently looking for a 4Kn supported SSD for my laptop, I know it doesn't 
 
 #### Formatting as 4Kn
 
+**Note: This will destroy any data currently on the drive!**
+
 There is a great article on the [Arch Wiki for formatting as Advanced Format](https://wiki.archlinux.org/title/Advanced_Format#Changing_sector_size), but mostly:
 
 - You would want `nvme-cli` installed,
 - Use `nvme id-ns -H /dev/nvme0n1` to double check it supports 4K LBAs (replacing `nvme0n1` with the respective device)
 - Then run `nvme format --lbaf=1 /dev/nvme0n1` (replacing '`1`' with the respective LBA ID)
-
-**Note: This will destroy any data currently on the drive!**
 
 #### Popular 4Kn drives
 
@@ -34,7 +34,7 @@ This was quickly thrown together, so it will not be detailed, complete, accurate
 |Corsair MP600 CORE XT 1TB|4096|512|
 |Crucial T700 1TB|4096|512|
 |Kingston FURY Renegade 2TB|4096|512|
+|Kingston KC3000 2TB|4096|512|
 |Samsung 1TB 990 Pro|512|512|
-|Kingston KC3000 1TB|512|512|
 |Crucial P5 Plus 1TB|512|512|
 {: .table }
