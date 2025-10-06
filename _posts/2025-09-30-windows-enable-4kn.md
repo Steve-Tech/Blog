@@ -3,7 +3,7 @@ layout: post
 title:  "Enable 4Kn Support on SSDs in Windows (or Linux)"
 ---
 
-Almost 2 years ago, I wrote a post on [finding 4Kn supported SSDs](/posts/find-4k-native-ssds/), but 4Kn was mostly only documented for Linux, and I didn't know how to enable it from within Windows. But as I'd like to make 4Kn more known, I thought I'd find out how to enable it using Windows too. If you're concerned about stability, 4Kn has been supported since Windows Vista SP1, and my brother had been running Windows 11 with 4Kn on a WD SN850X for about a year now, and hasn't had any issues.
+Almost 2 years ago, I wrote a post on [finding 4Kn supported SSDs](/posts/find-4k-native-ssds/), but 4Kn was mostly only documented for Linux, and I didn't know how to enable it from within Windows. But as I'd like to make 4Kn more known, I thought I'd find out how to enable it using Windows too. If you're concerned about stability, 4Kn has been supported since Windows Vista SP1 (although only bootable since Windows 8), and my brother had been running Windows 11 with 4Kn on a WD SN850X for about a year now, and hasn't had any issues.
 
 <!--more-->
 
@@ -15,11 +15,11 @@ NAND flash memory is manufactured with 4096 byte pages, but most consumer drives
 
 #### Preparation
 
-You will to download openSeaChest and extract it somewhere: [github.com/Seagate/openSeaChest](https://github.com/Seagate/openSeaChest).
+You will need to download openSeaChest and extract it somewhere: [github.com/Seagate/openSeaChest](https://github.com/Seagate/openSeaChest).
 
 I'm not sure if the normal SeaChest works on non-Seagate drives, but openSeaChest does!
 
-Converting to 4Kn requires erasing the drive, so I recommend doing this before installing your OS, or at least backup your data first! Cloning partitions also doesn't always work (FAT32 EFI partitions seem especially problematic), so it's best to just start fresh.
+Converting to 4Kn requires erasing the drive, so I recommend doing this before installing your OS, or at least backup your data first! Cloning partitions most likely won't work, so it's best to just start fresh.
 
 #### Checking if your drive supports 4Kn
 

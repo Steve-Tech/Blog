@@ -148,6 +148,20 @@ You can use [`check_clocks.c`](https://github.com/Avnu/tsn-doc/blob/master/misc/
 
     If you are using `systemctl edit` to override the service, add an extra `ExecStart=` line before this to clear the previous one.
 
+    If you're still having issues, add a file at `/usr/lib/pm-utils/sleep.d/99ptp4l-restart` with the following contents:
+
+    ```sh
+    #!/bin/sh
+
+    if [ "$1" = "resume" ]; then
+        systemctl restart ptp4l@enp12s0f0.service
+    fi
+
+    exit 0
+    ```
+
+    Replace `enp12s0f0` with your network interface, then make it executable with `sudo chmod +x /usr/lib/pm-utils/sleep.d/99ptp4l-restart`.
+
 - On Raspberry Pi 5s you may need to set `hwts_filter full` in `ptp4l.conf` for hardware timestamping to work correctly.
 - Hardware timestamping is broken on kernels 6.12.25 to 6.12.35, you will need to upgrade your kernel or use software timestamping instead. As of writing, Raspberry Pi OS is on 6.12.34 (issue: [raspberrypi/linux#6912](https://github.com/raspberrypi/linux/issues/6912)), but you can run `sudo rpi-update` to upgrade to Raspberry Pi's latest pre-release kernel.
 - If your machine has network bridges configured on the PTP interface (e.g. Proxmox), you will likely need to use `network_transport L2` in `ptp4l.conf` instead of the default `UDPv4` (This has to be set on all PTP devices).
