@@ -132,7 +132,15 @@ You can use [`check_clocks.c`](https://github.com/Avnu/tsn-doc/blob/master/misc/
 
 #### Troubleshooting
 
-- If you get `phc2sys: interface enp12s0f0 does not have a PHC` on boot up, but phc2sys otherwise works fine, you can edit the service (e.g `sudo systemctl edit phc2sys@enp12s0f0.service`) and add the following lines to retry starting:
+- If you get `phc2sys: interface enp12s0f0 does not have a PHC` on boot up, but phc2sys otherwise works fine, you can edit the service (e.g `sudo systemctl edit phc2sys@enp12s0f0.service`) and add the following lines to wait for networking:
+
+    ```ini
+    [Service]
+    After=network-online.target
+    Wants=network-online.target
+    ```
+
+    Or alternatively, you can add a restart policy to the service to restart it if it fails:
 
     ```ini
     [Service]
@@ -140,15 +148,16 @@ You can use [`check_clocks.c`](https://github.com/Avnu/tsn-doc/blob/master/misc/
     RestartSec=5
     ```
 
-- If you are using this on a desktop and get `clockcheck: clock frequency changed unexpectedly!` after resuming from sleep, you can make ptp4l step the clock by adding `step_threshold 1.0` to `/etc/ptp4l.conf`, and editing the `ExecStart=` line in `phc2sys@.service` to include the `-S 1` option:
+- If you get `clockcheck: clock frequency changed unexpectedly!` after bootup, add a sleep before starting ptp4l (e.g using `sudo systemctl edit ptp4l@enp12s0f0.service`):
 
     ```ini
-    ExecStart=/usr/sbin/phc2sys -w -s %I -S 1
+    [Service]
+    ExecStartPre=/bin/sleep 10
     ```
 
-    If you are using `systemctl edit` to override the service, add an extra `ExecStart=` line before this to clear the previous one.
+    You may be tempted to edit `sanity_freq_limit`, but it just seemed to cause more issues for me.
 
-    If you're still having issues, add a file at `/usr/lib/pm-utils/sleep.d/99ptp4l-restart` with the following contents:
+- If you are using this on a desktop and get `clockcheck: clock frequency changed unexpectedly!` after resuming from sleep, you can make ptp4l restart by adding a file at `/usr/lib/pm-utils/sleep.d/99ptp4l-restart` with the following contents:
 
     ```sh
     #!/bin/sh

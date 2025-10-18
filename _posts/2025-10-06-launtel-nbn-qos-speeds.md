@@ -47,6 +47,11 @@ queue/type/add name="cake-upload" kind=cake cake-overhead-scheme=ethernet cake-r
 queue/tree/add name="queue-upload" parent=ether1 packet-mark=no-mark queue=cake-upload max-limit=95M
 ```
 
+Also these seem to be Launtel's DNS servers, if anyone needs them:
+
+- IPv4: `203.12.12.12`
+- IPv6: `2404:e80::1337:af`
+
 #### Launtel Referral
 
 If you are interested in signing up to Launtel, please consider using my referral code: [`STEVETECH`](https://residential.launtel.net.au/residential/referral/STEVETECH). This should give you a $25 credit on your account and help support my work, you can read more about their [referral program here](https://www.launtel.net.au/referral-discount-program/).
