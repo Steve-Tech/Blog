@@ -95,6 +95,63 @@ a.card-link {
     display: block !important;
 }
 
+.t568-table > tbody > tr:nth-child(1) > td:nth-child(2),
+.t568-table > tbody > tr:nth-child(3) > td:nth-child(3) {
+    background: repeating-linear-gradient(45deg,
+            var(--bs-green),
+            var(--bs-green) 10px,
+            var(--bs-gray-500) 10px,
+            var(--bs-gray-500) 20px) !important;
+    color: var(--bs-dark);
+}
+.t568-table > tbody > tr:nth-child(2) > td:nth-child(2),
+.t568-table > tbody > tr:nth-child(6) > td:nth-child(3) {
+    background-color: var(--bs-green) !important;
+    color: var(--bs-dark);
+}
+.t568-table > tbody > tr:nth-child(3) > td:nth-child(2),
+.t568-table > tbody > tr:nth-child(1) > td:nth-child(3) {
+    background: repeating-linear-gradient(45deg,
+            var(--bs-orange),
+            var(--bs-orange) 10px,
+            var(--bs-gray-500) 10px,
+            var(--bs-gray-500) 20px) !important;
+    color: var(--bs-dark);
+}
+.t568-table > tbody > tr:nth-child(4) > td:nth-child(2),
+.t568-table > tbody > tr:nth-child(4) > td:nth-child(3) {
+    background-color: var(--bs-blue) !important;
+    color: var(--bs-light);
+}
+.t568-table > tbody > tr:nth-child(5) > td:nth-child(2),
+.t568-table > tbody > tr:nth-child(5) > td:nth-child(3) {
+    background: repeating-linear-gradient(45deg,
+            var(--bs-blue),
+            var(--bs-blue) 10px,
+            var(--bs-gray-600) 10px,
+            var(--bs-gray-600) 20px) !important;
+    color: var(--bs-light);
+}
+.t568-table > tbody > tr:nth-child(6) > td:nth-child(2),
+.t568-table > tbody > tr:nth-child(2) > td:nth-child(3) {
+    background-color: var(--bs-orange) !important;
+    color: var(--bs-dark);
+}
+.t568-table > tbody > tr:nth-child(7) > td:nth-child(2),
+.t568-table > tbody > tr:nth-child(7) > td:nth-child(3) {
+    background: repeating-linear-gradient(45deg,
+            var(--bs-warning-text-emphasis),
+            var(--bs-warning-text-emphasis) 10px,
+            var(--bs-gray-600) 10px,
+            var(--bs-gray-600) 20px) !important;
+    color: var(--bs-light);
+}
+.t568-table > tbody > tr:nth-child(8) > td:nth-child(2),
+.t568-table > tbody > tr:nth-child(8) > td:nth-child(3) {
+    background-color: var(--bs-warning-text-emphasis) !important;
+    color: var(--bs-light);
+}
+
 img {
     max-width: 100%;
     object-fit: scale-down;
