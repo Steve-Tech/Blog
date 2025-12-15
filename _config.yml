@@ -20,7 +20,7 @@
 
 title: Steve's Blog
 email: me@stevetech.au
-description: Steve's Tech Blog on mostly things I spent a while working out.
+description: Where I document my solutions.
 #description: >- # this means to ignore newlines until "baseurl:"
 #  The Tech Blog
 baseurl: "" # the subpath of your site, e.g. /blog

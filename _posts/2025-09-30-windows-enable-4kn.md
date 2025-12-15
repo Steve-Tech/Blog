@@ -127,8 +127,8 @@ I didn't do any extensive testing, so take these results with a grain of salt.
 
 #### 512e Benchmark
 
-![CrystalDiskMark 512e](/img/articles/windows-enable-4kn/CrystalDiskMark-512e.png){:width="482"}
+![CrystalDiskMark 512e](/img/articles/windows-enable-4kn/CrystalDiskMark-512e.png){:width="482" .rounded-3}
 
 #### 4Kn Benchmark
 
-![CrystalDiskMark 4Kn](/img/articles/windows-enable-4kn/CrystalDiskMark-4kn.png){:width="482"}
+![CrystalDiskMark 4Kn](/img/articles/windows-enable-4kn/CrystalDiskMark-4kn.png){:width="482" .rounded-3}

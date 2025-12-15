@@ -138,7 +138,7 @@ Using a kernel module is the most efficient way to read the tachometer signal, a
 
 3. **Configure Grafana**: There are lots of ways to query this data in Grafana, but you will basically need to query the `rack_fan` measurement and use the `rpm` field, and group by the `location` tag if you have multiple fans. Here's a screenshot of my fan speed graph in Grafana:
 
-    ![Grafana Screenshot](/img/articles/raspberry-pi-fan-tacho/grafana-screenshot.png)
+    ![Grafana Screenshot](/img/articles/raspberry-pi-fan-tacho/grafana-screenshot.png){: .rounded-1 }
 
 #### Basic PWM Fan Control
 

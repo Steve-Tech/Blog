@@ -37,8 +37,8 @@ Many ISP provided routers (e.g. Telstra's Smart Modem), will also automatically 
 
 If you're interested, these are my settings on Launtel's portal:
 
-![Launtel QoS Settings (Light Mode)](/img/articles/launtel-nbn-qos-speeds/launtel-qos-screenshot.png){: .light-only }
-![Launtel QoS Settings (Dark Mode)](/img/articles/launtel-nbn-qos-speeds/launtel-qos-screenshot-dark.png){: .dark-only }
+![Launtel QoS Settings (Light Mode)](/img/articles/launtel-nbn-qos-speeds/launtel-qos-screenshot.png){: .light-only .rounded }
+![Launtel QoS Settings (Dark Mode)](/img/articles/launtel-nbn-qos-speeds/launtel-qos-screenshot-dark.png){: .dark-only .rounded }
 
 I've disabled upload shaping as I've configured the following queue tree on my MikroTik router:
 
