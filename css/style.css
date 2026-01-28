@@ -167,6 +167,10 @@ a:hover {
     color: var(--bs-orange);
 }
 
+code:not(pre>code)::before, code:not(pre>code)::after {
+    content: '`';
+}
+
 @media (max-width: 575.98px) {
     .container>.corners {
         border-radius: 0 0 2rem 2rem;

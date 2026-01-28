@@ -22,7 +22,7 @@ There is a great article on the [Arch Wiki for formatting as Advanced Format](ht
 
 - You would want `nvme-cli` installed,
 - Use `nvme id-ns -H /dev/nvme0n1` to double check it supports 4K LBAs (replacing `nvme0n1` with the respective device)
-- Then run `nvme format --lbaf=1 /dev/nvme0n1` (replacing '`1`' with the respective LBA ID)
+- Then run `nvme format --lbaf=1 /dev/nvme0n1` (replacing `1` with the respective LBA ID)
 
 #### Popular 4Kn drives
 
