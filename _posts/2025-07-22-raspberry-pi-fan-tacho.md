@@ -21,6 +21,8 @@ I am using a Noctua NF-A12x25-5V-PWM, and it is connected as follows:
 | 4 (PWM) | GPIO 18 |
 {: .table }
 
+You will also need a pull-up resistor on the tachometer pin, as it is an open collector output. I used a 10k resistor between the tachometer pin and 3.3V, but as the Noctua white paper states the max current is 5mA, any reasonable resistor above 660 ohms should work.
+
 #### Installing the Kernel Module
 
 Using a kernel module is the most efficient way to read the tachometer signal, as any other way will require a hand off to user space, and I wanted to avoid that overhead even if it's only interrupting ~60 times a second. I will be using [rszimm](https://github.com/rszimm)'s [gpio-counter](https://github.com/rszimm/gpio-counter) module, which will count the pulses and expose the count via a sysfs interface.
@@ -77,20 +79,20 @@ Using a kernel module is the most efficient way to read the tachometer signal, a
 2. **Load the module**: You can load the module with the following command, replacing `GPIO_PIN` with the GPIO pin number you found in the previous step.
 
     ```bash
-    sudo modprobe gpio-counter gpio=GPIO_PIN
+    sudo modprobe gpio-counter gpio_pins=GPIO_PIN
     ```
 
-3. **Check the sysfs interface**: The module will create a sysfs interface at `/sys/kernel/gpio-counter/pulse_count`. You can check the current count with:
+3. **Check the sysfs interface**: The module will create a sysfs interface at `/sys/kernel/gpio-counter/0/pulse_count`. You can check the current count with:
 
     ```bash
-    cat /sys/kernel/gpio-counter/pulse_count
+    cat /sys/kernel/gpio-counter/0/pulse_count
     ```
 
 4. **Make the module load on boot**: To ensure the module loads on boot, you can create a file in `/etc/modules-load.d/` and add the module name to it. You should also create a modprobe configuration file to set the GPIO pin.
 
     ```bash
     echo gpio-counter | sudo tee /etc/modules-load.d/gpio-counter.conf
-    echo options gpio-counter gpio_pin=GPIO_PIN | sudo tee /etc/modprobe.d/gpio-counter.conf
+    echo options gpio-counter gpio_pins=GPIO_PIN | sudo tee /etc/modprobe.d/gpio-counter.conf
     ```
 
 #### Configuring Telegraf
@@ -100,7 +102,7 @@ Using a kernel module is the most efficient way to read the tachometer signal, a
     ```bash
     #!/usr/bin/env bash
 
-    SYSFS="/sys/kernel/gpio-counter/pulse_count"
+    SYSFS="/sys/kernel/gpio-counter/0/pulse_count"
     PPR=2  # Pulses per revolution (usually 2)
 
     while true; do
@@ -201,7 +203,7 @@ You can also add the duty cycle percent to telegraf script that I created at `/o
 
 ```sh
 #!/usr/bin/env bash
-SYSFS="/sys/kernel/gpio-counter/pulse_count"
+SYSFS="/sys/kernel/gpio-counter/0/pulse_count"
 PPR=2  # Pulses per revolution (usually 2)
 
 SYSFS_PERIOD="/sys/class/pwm/pwmchip0/pwm2/period"
