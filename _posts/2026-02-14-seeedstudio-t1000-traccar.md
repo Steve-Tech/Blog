@@ -31,22 +31,30 @@ Traccar listens for the TTN webhook on port `5261`, so you will need to make sur
 
 ![TTN Webhook Configuration](/img/articles/seeedstudio-t1000-traccar/ttn-traccar-webhook.png){: .rounded}
 
-* **Webhook ID**: This can by anything you want, I use `traccar`.
-* **Webhook format**: This should be set to `JSON`.
-* **Base URL**: This should be the URL of your Traccar server, e.g. `http://traccar.example.com:5261`.
-* **Enabled event types**: You should only select `Uplink message` here, leave the rest unchecked. The path doesn't matter, as Traccar will ignore it and just listen for any incoming requests on that port.
+- **Webhook ID**: This can be anything you want, I use `traccar`.
+- **Webhook format**: This should be set to `JSON`.
+- **Base URL**: This should be the URL of your Traccar server, e.g. `http://traccar.example.com:5261`.
+- **Enabled event types**: You should only select `Uplink message` here, leave the rest unchecked. The path doesn't matter, as Traccar will ignore it and just listen for any incoming requests on that port.
 
 #### Setting up the Device in Traccar
 
 Finally, you will need to add your device to Traccar. You can do this by going to the Traccar web interface, and clicking on the plus (**+**) icon. The identifier needs to match the 'End device ID' you set on the TTN console when you registered your device. You can set the device name and other information as you like.
 
-You should now start seeing data from your T1000 in Traccar! Remember that you will need to wait until it's next upload interval.
+You should now start seeing data from your T1000 in Traccar! Remember that you will need to wait until its next upload interval.
 
-#### Affiliate Links
+As the T1000 also supports WiFi scanning, you can also enable an [LBS Geolocation API](https://www.traccar.org/lbs-geolocation/) in Traccar to get a location fix when GPS is not available, using the WiFi access points around you.
+
+#### Enabling Downlink Commands (Optional)
+
+
+
+#### Affiliate Links & Coupons
 
 If you are interested in purchasing a SeeedStudio T1000, you can use the following affiliate links to support my work:
 
-* [SeeedStudio T1000-A (with sensors)](https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-A-p-5697.html?sensecap_affiliate=WpDECrz)
-* [SeeedStudio T1000-B (without sensors)](https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-B-p-5698.html?sensecap_affiliate=WpDECrz)
+- [SeeedStudio T1000-A (with sensors)](https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-A-p-5697.html?sensecap_affiliate=WpDECrz&referring_service=link)
+- [SeeedStudio T1000-B (without sensors)](https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-B-p-5698.html?sensecap_affiliate=WpDECrz&referring_service=link)
+- [SeeedStudio Trackers](https://www.seeedstudio.com/Positioning-Tracker-c-2495.html?sensecap_affiliate=WpDECrz&referring_service=link)
+- Coupon: `G57NNL2Z` - US$2 off your cart
 
-I run no external ads on this blog, and I spent my own money on my T1000-A, so if you found this guide helpful and want to support me, please consider using the affiliate links above. It doesn't cost you anything extra, but it incentivises me to [improve LoRaWAN support in Traccar](https://github.com/traccar/traccar/pull/5708), as well as the guides of course.
+I run no external ads on this blog, and I spent my own money on my T1000-A, so if you found this guide helpful and are considering purchasing a T1000, please click the affiliate links above. It doesn't cost you anything extra, but it incentivises me to continue [improving LoRaWAN support in Traccar](https://github.com/traccar/traccar/pulls?q=is%3Apr+is%3Aclosed+author%3ASteve-Tech), as well as write more guides like this! Alternatively you can also [sponsor me on GitHub](https://github.com/sponsors/Steve-Tech).
