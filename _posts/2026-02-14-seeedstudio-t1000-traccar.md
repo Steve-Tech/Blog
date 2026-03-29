@@ -19,7 +19,7 @@ Once your device is sending data to TTN, you will need to set up a payload forma
 
 I have created a custom payload formatter that converts the T1000's payload into a simple JSON format that Traccar can parse:
 
-<script src="https://gist.github.com/Steve-Tech/c572309397592f994efe376c046f6f68.js"></script>
+{% gist Steve-Tech/c572309397592f994efe376c046f6f68 t1000-decoder.js %}
 
 [View Payload Formatter on GitHub Gist](https://gist.github.com/Steve-Tech/c572309397592f994efe376c046f6f68)
 

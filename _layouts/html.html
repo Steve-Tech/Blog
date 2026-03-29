@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
     <link rel="stylesheet" type="text/css" href="{% link /css/bootstrap-zephyr.min.css %}">
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.13.1/font/bootstrap-icons.min.css"
@@ -13,11 +14,12 @@
         rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{% link /css/fruity.css %}">
     <link rel="stylesheet" type="text/css" href="{% link /css/style.css %}">
-    <link rel="icon" type="image/svg+xml" href="{% link /favicons/favicon.svg %}">
-    <link rel="icon" type="image/png" href="{% link /favicons/favicon-32x32.png %}" sizes="32x32">
-    <link rel="icon" type="image/png" href="{% link /favicons/favicon-16x16.png %}" sizes="16x16">
-    {%- seo -%}
-    {%- feed_meta -%}
+    <link rel="icon" type="image/svg+xml" href="{% link /img/favicon.svg %}">
+    <link rel="icon" type="image/png" href="{% link /img/favicon-32x32.png %}" sizes="32x32">
+    <link rel="icon" type="image/png" href="{% link /img/favicon-16x16.png %}" sizes="16x16">
+    <!-- Theme by me! -->
+    {% seo %}
+    {% feed_meta %}
     <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit" defer></script>
 </head>
 

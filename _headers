@@ -5,3 +5,9 @@ https://:project.pages.dev/*
   X-Frame-Options: DENY
   Content-Security-Policy: frame-ancestors 'self';
   Permissions-Policy: interest-cohort=()
+
+/
+  Link: </css/bootstrap-zephyr.min.css>; as=style; rel=preload, </css/style.css>; as=style; rel=preload
+
+/posts/*
+  Link: </css/bootstrap-zephyr.min.css>; as=style; rel=preload, </css/style.css>; as=style; rel=preload
