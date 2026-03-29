@@ -31,7 +31,7 @@ I recently replaced my QNAP QSW-M408-4C with a MikroTik CRS312-4C+8XG, and I tho
 
 #### Assembly Notes
 
-The assembly is the mostly reverse of the disassembly, but there are a few things to keep in mind:
+The assembly is mostly the reverse of the disassembly, but there are a few things to keep in mind:
 
 * Be sure to push the cover back on firmly, and ensure the SFP+ ports are aligned properly as the metal bits can catch on the cover.
     ![Reassembling the switch](/img/articles/qnap-switch-taredown/step5.jpg){: .rounded }

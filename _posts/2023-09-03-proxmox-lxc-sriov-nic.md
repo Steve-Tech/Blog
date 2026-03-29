@@ -3,10 +3,10 @@ layout: post
 title:  "Using an SR-IOV Network Interface in a Proxmox LXC"
 ---
 
-For fun I was trying to work out how I could use an SR-IOV Interface for my LanCache container. Since it would let me run it with very low disk overhead, compared to a VM, and low network overhead compared to a virtual bridge; I am aware that this probably doesn't affect much though.<!--more-->
-Also, after running an iperf, it still isn't as fast as on the host, or a VM with PCIe passthrough, but it's seems slightly faster than a virtual bridge.
+For fun, I was trying to work out how I could use an SR-IOV Interface for my LanCache container. Since it would let me run it with very low disk overhead, compared to a VM, and low network overhead compared to a virtual bridge; I am aware that this probably doesn't affect much though.<!--more-->
+Also, after running an iperf, it still isn't as fast as on the host, or a VM with PCIe passthrough, but it seems slightly faster than a virtual bridge.
 
-Firstly you need to have SR-IOV enabled and working, and also have the VF's showing up on the host, eg. interfaces similar to `ens6f0v2` showing up in `ip a`.
+Firstly you need to have SR-IOV enabled and working, and also have the VF's showing up on the host, e.g. interfaces similar to `ens6f0v2` showing up in `ip a`.
 
 Since as you may have noticed, proxmox doesn't support this in the UI so you're going to have to add these to the LXC's config (`nano /etc/pve/lxc/<ct-id>.conf`).
 
@@ -20,7 +20,7 @@ lxc.net.0.name: eth0  # Not needed, but it makes things easier
 # lxc.net.0.mtu: 9000  # Enable Jumbo Frames, doesn't work on my NIC
 ```
 
-Depending if you've already got a network interface in the container, you may need to change the `lxc.net.0` to `lxc.net.1` or higher. Then you can start the container and your interface should show up in the container's `ip a`:
+Depending on if you've already got a network interface in the container, you may need to change the `lxc.net.0` to `lxc.net.1` or higher. Then you can start the container and your interface should show up in the container's `ip a`:
 
 ```text
 root@lancache:~# ip a

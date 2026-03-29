@@ -8,7 +8,7 @@ The Motherboard Drivers and BIOS are [available on jginyue.com.cn](http://jginyu
 
 I've also made a custom [lm-sensors config file](https://gist.github.com/Steve-Tech/d81921919654c1fef246d65ca86df418) for this motherboard.
 
-All of this article is my own findings but [Miyconst's video](https://youtu.be/9v5s42DEC3I) is worth checking out.
+All of this article is my own findings, but [Miyconst's video](https://youtu.be/9v5s42DEC3I) is worth checking out.
 
 #### Important Features & Notes
 ##### AER Errors
@@ -723,6 +723,6 @@ BIOS Information
 - Boot Override
 
 #### Additional Notes
-If you're wondering what some of those options even do, looking though the manual of a similar X99 or C600 motherboard can help.
+If you're wondering what some of those options even do, looking through the manual of a similar X99 or C600 motherboard can help.
 <br/>
 For example here's the [manual for a X10DRi-T4+](https://www.supermicro.com/manuals/motherboard/C600/MNL-1560.pdf#p73).

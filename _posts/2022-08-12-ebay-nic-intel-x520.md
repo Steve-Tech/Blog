@@ -16,7 +16,7 @@ The Intel X520-DA1 is a single port 10 Gigabit SFP+ network card released in 201
 The card has drivers for Windows, Linux, FreeBSD, and VMware. After testing, Debian and FreeBSD have the drivers built in, but FreeBSD seemed to not properly setup the NIC sometimes.
 The latest driver that works on Windows (and possibly other OSs) is version [25.6](https://www.intel.com/content/www/us/en/download/15084/30209/intel-ethernet-adapter-complete-driver-pack.html), newer versions faced a similar problem as FreeBSD.
 
-However an important thing to note, is that my card is missing all of the Intel branding as well as shipping from China in a generic box, possibly meaning this is a Chinese clone of the X520-DA1.
+However, an important thing to note, is that my card is missing all of the Intel branding as well as shipping from China in a generic box, possibly meaning this is a Chinese clone of the X520-DA1.
 I didn't know they existed at the time, but after searching up my problems with FreeBSD and TrueNAS Core, I found [this thread](https://www.truenas.com/community/threads/11-3-rc1-doesnt-like-x520.81502/) where people are discussing the problems they've had.
 
 #### Features

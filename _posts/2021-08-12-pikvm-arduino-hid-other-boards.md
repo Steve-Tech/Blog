@@ -10,8 +10,8 @@ This is just a short guide to compiling and uploading the PIKVM Arduino HID onto
 * I do not believe that boards using Hoodloader2 firmware are supported
 
 #### Wiring & Setup
-[Follow the official wiring and setup](https://docs.pikvm.org/arduino_hid/#usb-keyboard-and-mouse)  
-Mine is wired like so:  
+[Follow the official wiring and setup](https://docs.pikvm.org/arduino_hid/#usb-keyboard-and-mouse)
+Mine is wired like so:
 ```
 RasPi ->  Arduino
 5V    ->  5V
@@ -36,7 +36,7 @@ Pin 3 2N2222 -> RST
 	platform = atmelavr
 	board = leonardo
 	```
-5. Save (`Ctrl` + `X`, then `Y`) and contine the official steps.
+5. Save (`Ctrl` + `X`, then `Y`) and continue the official steps.
 
 #### Additional Notes
 * A USB to TTL serial adapter can be used temporarily instead of the RasPi pins if you don't have a Logic level shifter; you can use another Arduino (Uno works) as a USB to TTL adapter by connecting the RST pin to GND.

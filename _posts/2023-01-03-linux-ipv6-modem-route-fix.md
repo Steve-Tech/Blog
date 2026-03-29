@@ -14,7 +14,7 @@ There was a device on my network that was sending a bad IPv6 route to my Linux P
 #### Symptoms
 
 - [ipv6-test.com](http://ipv6-test.com) will either fail, say something similar to "Danger! IPv6 sorta works - however, large packets appear to fail, giving the appearance of a broken website. If a publisher publishes to IPv6, you will believe their web site to be broken. Ask your ISP about MTU issues; possibly with your tunnel. Check your firewall to make sure that ICMPv6 messages are allowed (in particular, Type 2 or Packet Too Big).", or it just passes.
-- Pinging an IPv6 site, eg. `ping -6 one.one.one.one` will sometimes work and sometimes not, basically randomly.
+- Pinging an IPv6 site, e.g. `ping -6 one.one.one.one` will sometimes work and sometimes not, basically randomly.
 - Some websites will load slower than usual.
 - VMs might believe they have IPv6, but fail to load sites half the time.
 
@@ -44,7 +44,7 @@ In my case the first one was pingable (it's also the one with the /56 route), th
 
 #### Finished
 
-You might need to restart your connection (`systemctl restart NetworkManager`), but once `ip -6 r` only shows 1 route, make sure none of the symptoms are still showing; eg. Run [ipv6-test.com](http://ipv6-test.com) a few times until you're comfortable that it's fixed.
+You might need to restart your connection (`systemctl restart NetworkManager`), but once `ip -6 r` only shows 1 route, make sure none of the symptoms are still showing; e.g. Run [ipv6-test.com](http://ipv6-test.com) a few times until you're comfortable that it's fixed.
 
 For reference this is the working routes for the example:
 

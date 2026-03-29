@@ -7,7 +7,7 @@ I was recently looking for a 4Kn supported SSD for my laptop, I know it doesn't 
 
 #### Using the [Linux Hardware Database](https://linux-hardware.org/?view=search&typeid=disk&busid=nvme)
 
-- I have found the most luck by entering the model name (not model number) of the SSD, eg. "SN850" for a "Western Digital 1TB Black SN850", and leaving the rest blank.
+- I have found the most luck by entering the model name (not model number) of the SSD, e.g. "SN850" for a "Western Digital 1TB Black SN850", and leaving the rest blank.
 - Choose whatever result looks most like your SSD, and click on it.
 - Then click on whatever probe result you feel like, I prefer to stick to the ones with a 'works' status. It might be best to cross reference multiple results too.
 - Now on that probe's page, scroll down to Logs, and click `Smartctl`.

@@ -3,7 +3,7 @@ layout: post
 title:  "The Best Way to Stream MikroTik's Packet Sniffer to Wireshark"
 ---
 
-While you can use `udp.dstport == 37008` to filter for MikroTik's packet sniffer, I prefer to setup the 'UDP Listener remote capture: udpdump' feature in Wireshark. This way you will have a clean packet capture without having to filter out unrelated traffic, with the benefit of also not spamming your router with ICMP 'Destination Unreachable' packets.
+While you can use `udp.dstport == 37008` to filter for MikroTik's packet sniffer, I prefer to set up the 'UDP Listener remote capture: udpdump' feature in Wireshark. This way you will have a clean packet capture without having to filter out unrelated traffic, with the benefit of also not spamming your router with ICMP 'Destination Unreachable' packets.
 <!--more-->
 
 #### Requirements

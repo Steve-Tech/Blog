@@ -12,8 +12,8 @@ After a bunch of troubleshooting, I did end up making my monitor present a VRR E
 1. Acquire your monitor's EDID, I used `get-edid > monitor.bin`
 2. Using wxEDID, view the EDID's MRL section
 3. Set `extd_timg` to `0x01`, I believe this is required for VRR
-4. Make sure `min_Vfreq` and `max_Vfreq` are correctly set to your monitor's range (eg. 48-144 Hz)
-5. I'm not sure but I think `min_Hfreq` should be the same as `max_Hfreq`, if it's not set it to the same as `max_Hfreq` (eg. Both 168 kHz)
+4. Make sure `min_Vfreq` and `max_Vfreq` are correctly set to your monitor's range (e.g. 48-144 Hz)
+5. I'm not sure but I think `min_Hfreq` should be the same as `max_Hfreq`, if it's not set it to the same as `max_Hfreq` (e.g. Both 168 kHz)
 
 #### Applying the EDID (on Wayland)
 
@@ -24,4 +24,4 @@ After a bunch of troubleshooting, I did end up making my monitor present a VRR E
 
 ##### Multiple EDIDs
 
-You can specify multiple EDIDs in the kernel command line using a comma, eg. `drm.edid_firmware=DP-1:edid/monitor1.bin,DP-2:edid/monitor2.bin`
+You can specify multiple EDIDs in the kernel command line using a comma, e.g. `drm.edid_firmware=DP-1:edid/monitor1.bin,DP-2:edid/monitor2.bin`

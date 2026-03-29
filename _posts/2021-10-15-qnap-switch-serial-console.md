@@ -3,7 +3,7 @@ layout: post
 title:  "Things you can do with a QNAP Switch's Serial Console"
 ---
 
-I have a QNAP QSW-M408-4C and I was wondering what the serial console port was used for, especially since it wasn't documented anywhere. Well it turns out it's a full TTY terminal in LEDE Linux.<!--more--> Thanks to [u/sinisterpisces's post](https://www.reddit.com/r/qnap/comments/ofv6ge/qswm21082c_console_port_do_i_need_a_special_usb/) who inspired me to find out more about it.
+I have a QNAP QSW-M408-4C, and I was wondering what the serial console port was used for, especially since it wasn't documented anywhere. Well it turns out it's a full TTY terminal in LEDE Linux.<!--more--> Thanks to [u/sinisterpisces's post](https://www.reddit.com/r/qnap/comments/ofv6ge/qswm21082c_console_port_do_i_need_a_special_usb/) who inspired me to find out more about it.
 
 #### Update
 **This guide only works for older versions of the firmware, please see marcan's [qsw-tools](https://github.com/marcan/qsw-tools), for an updated guide.**
@@ -57,7 +57,7 @@ root@LEDE:/admin# ls /usr/bin/*.sh /bin/*.sh /sbin/*.sh /etc/*.sh
 
 * `sys_stat.sh` Gets/sets fan speeds, temp, rtc, leds, memory, reset, i2c, and mode (`--help` works)
 * `isscli.sh` "Aricent Intelligent Switch Solution" CLI (also on `tcp://localhost:6023`, blocked externally by iptables)
-* `runisscmd.sh` Runs piped input as a command on the CLI (eg. `echo "help" | runisscmd.sh`)
+* `runisscmd.sh` Runs piped input as a command on the CLI (e.g. `echo "help" | runisscmd.sh`)
 * `luacli.sh` "LUA CLI shell", (`?` for help, some things cause switch to crash)
 * `isspass.sh` Sets the UI Password using said API using the MAC Address as the old password
 * `reg_boardinfo.sh` Sets MAC, Serial and Model (I think)
@@ -66,7 +66,7 @@ root@LEDE:/admin# ls /usr/bin/*.sh /bin/*.sh /sbin/*.sh /etc/*.sh
 #### Remote Access
 **Enabling SSH**
 
-The switch seems to have SSH enabled by default but it's blocked by `iptables`, here's how to unblock it:
+The switch seems to have SSH enabled by default, but it's blocked by `iptables`, here's how to unblock it:
 
 **Enable SSH until reboot**
 
@@ -77,7 +77,7 @@ The switch seems to have SSH enabled by default but it's blocked by `iptables`, 
 **Enable SSH permanently**
 
 * Edit `/etc/firewall.user`
-	* eg. `vi /etc/firewall.user`
+	* e.g. `vi /etc/firewall.user`
 * Add a `#` to the beginning of the line that says `iptables -A INPUT -i cpsstap -p tcp --dport 22 -j DROP` (likely line 2)
 	* press `i` to insert in vi
 * Save and reboot

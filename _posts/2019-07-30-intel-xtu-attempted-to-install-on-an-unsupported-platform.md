@@ -8,6 +8,6 @@ I was recently wanting to mess around with the CPU clocks on my laptop which is 
   1. Download the official [Intel XTU](https://downloadcenter.intel.com/download/24075/Intel-Extreme-Tuning-Utility-Intel-XTU-)
   2. Open it until you get to the error but do not close it
   3. Open File Explorer to ‘C:\ProgramData\Package Cache’ and search for ‘xtu’ look for something named ‘Intel_XtuInstaller.msi’, ‘XTUInstaller.msi’ or something similar
-  4. Copy it to a safe place (ie. your Desktop or Documents)
+  4. Copy it to a safe place (i.e. your Desktop or Documents)
   5. Open CMD to the directory you copied the .msi file to (You can type cmd in the address bar to do this automatically) and type in `msiexec /i Intel_XtuInstaller.msi DISABLEPLATFORMCHECK=1`
   6. You have to restart your laptop otherwise you will get an error along the lines of ‘the drivers are not present’ (trust me I’ve tried)
